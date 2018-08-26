@@ -44,29 +44,40 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 # Weekend Accomplishments
 - All team members completed sample Google Chrome extension
 - Confirm feasibility of the following APIs:
- - Reddit (Extract TIL subreddit data)
- - New York Times API
+  - Reddit (Extract TIL subreddit data)
+  - New York Times API
 
 # Timeline
 
 ## Weekend
-  - Compile 15 Snippets for each category
-  - Explore APIs to leverage for seed data for each category (esp. for the live news)
-  - Do sample Google Chrome extension
-  - Finalize proposal README.md
+- Compile 15 Snippets for each category
+- Explore APIs to leverage for seed data for each category (esp. for the live news)
+- Do sample Google Chrome extension
+- Finalize proposal README.md
 
 ## Day 1
- - Watch all Chrome Extension Tutorials
- - Display seed data for each category
- - Create category preferences for users
+- Both:
+   - Watch all Chrome Extension Tutorials
+- Amanda:
+  - Design display page (that shows up on new tab or new window) to display snippets
+  - Make this display page pull from some sort of seed data for now
+- Dustin:
+  - Design preferences page for users (choose snippet categories)
+  - Make this page permanently store user preferences with Chrome Storage
+
 
 ## Day 2
-- Create Reddit API requests for fetching top (15) TIL posts
-- Create News API requests for top stories
-- Begin converting seed data to API requests (Reddit, News, etc.)
+- Dustin
+  - Create Reddit API requests for fetching top (15) TIL posts
+- Amanda
+  - Create News API requests for top stories
+- Both:
+  - Research interesting APIs for Snippet categories
+  - Connect display page to API calls
 
 ## Day 3
-- Assess API call scalability with large amounts of users
+- Assess API scalability with large amounts of users
+- Design Logo
 
 # Marketing
 - Both members will each share with at least 15 friends and family members

@@ -43,7 +43,9 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 
 # Weekend Accomplishments
 - All team members completed sample Google Chrome extension
-<!-- - Identified coding challenges for users -->
+- Confirm feasibility of the following APIs:
+ - Reddit (Extract TIL subreddit data)
+ - New York Times API
 
 # Timeline
 
@@ -55,13 +57,16 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 
 ## Day 1
  - Watch all Chrome Extension Tutorials
- - Create Reddit API requests for fetching top (15) TIL posts
- - Create News API requests for top stories
+ - Display seed data for each category
+ - Create category preferences for users
 
 ## Day 2
-- Create category preferences for users
-- Display seed data for each category
+- Create Reddit API requests for fetching top (15) TIL posts
+- Create News API requests for top stories
 - Begin converting seed data to API requests (Reddit, News, etc.)
+
+## Day 3
+- Assess API call scalability with large amounts of users
 
 # Marketing
 - Both members will each share with at least 15 friends and family members

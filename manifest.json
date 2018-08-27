@@ -2,11 +2,12 @@
   "manifest_version": 2,
   "name": "Snippet",
   "version": "1.0",
-  "default_locale": "en",
   "description": "Fulfill your curiosity cravings",
   "author": "Amanda Lee & Dustin Pearson",
+  "permissions": ["storage"],
   "background": {
-    "persistent": false,
+    "scripts": ["background.js"],
+    "persistent": false
   },
   "page_action": {
     "default_popup": "popup.html",
@@ -25,5 +26,5 @@
   },
   "chrome_url_overrides" : {
     "newtab": "content.html"
-  },
+  }
 }

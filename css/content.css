@@ -3,7 +3,19 @@
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+
   font-family: 'Lato', sans-serif;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 .top-half {
@@ -13,8 +25,11 @@ body {
   align-items: center;
 
   min-width: 100%;
-  min-height: 60%;
-  padding: 20px;
+  /* min-height: 60%; */
+}
+
+.til, .sci-hist, .news {
+  width: 33%;
 }
 
 .sci-hist {
@@ -29,12 +44,22 @@ body {
   flex-direction: column;
 
   min-width: 100%;
-  min-height: 30%;
+  /* min-height: 30%; */
+}
+
+.vocab, .brainteaser {
+  display: flex;
+  flex-direction: row;
 }
 
 .til, .science, .history, .news, .vocab, .brainteaser {
-  border: 1px solid gray;
-  border-radius: 3px;
   height: 100%;
   width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid white;
+  border-radius: 3px;
+
+  background: #6a9db5;
+  color: white;
 }

@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "Snippet",
+  "version": "1.0",
+  "default_locale": "en",
+  "description": "Fulfill your curiosity cravings",
+  "author": "Amanda Lee & Dustin Pearson",
+  "background": {
+    "persistent": false,
+  },
+}

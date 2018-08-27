@@ -32,7 +32,10 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 - [ ] Allow for users to submit snippets: form to send a link (ex.: a Wikipedia link) that will be curated if it fits a category
 
 ## Bonus Features
-- [ ] Next to each snippet, an interesting/not interesting button to click on that will update user preferences
+- [ ] Use external database to ensure same content each day for every computer
+- [ ] Allow users to see their Snippet history
+- [ ] Custom styling for their homepage
+- [ ] Google Earth images/National Geographic/etc. API for background behind the snippet
 
 # Technologies and Technical Challenges
 - JavaScript
@@ -55,9 +58,10 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 - Do sample Google Chrome extension
 - Finalize proposal README.md
 
-## Day 1
+## Day 1: Setup, Seed
 - Both
    - Watch all Chrome Extension Tutorials
+   - Setup for Chrome extension (manifest, background, popup files)
 - Amanda
   - Design display page (that shows up on new tab or new window) to display snippets
   - Make this display page pull from some sort of seed data for now
@@ -66,16 +70,16 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
   - Make this page permanently store user preferences with Chrome Storage
 
 
-## Day 2
+## Day 2: TIL, News
 - Dustin
-  - Create Reddit API requests for fetching top (15) TIL posts
+  - Create Reddit API requests for fetching TIL posts
 - Amanda
   - Create News API requests for top stories
 - Both:
   - Research interesting APIs for Snippet categories
   - Connect display page to API calls
 
-## Day 3
+## Day 3: Vocab, more History & Science Seed
 - Amanda
   - Create dictionary API requests to get details of SAT words
 - Dustin
@@ -83,22 +87,22 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 - Both:
   - Connect display to API calls
 
-## Day 4
+## Day 4: Brainteasers
 - Both
   - Examine new APIs for facts
   - Use riddle API for new functionality
 
-## Day 5
+## Day 5: History
 - Amanda
   - Create local database with Google Chrome Storage to store old Snippets
 - Dustin
   - Create external database to house user-submitted snippets
 
-## Day 6
+## Day 6 (weekend): Submissions
 - Both
   - Continue work with databases for optimized user functionality
 
-## Day 7
+## Day 7 (weekend): Polish
 - Assess API scalability with large amounts of users
 - Design Logo
 - Polish design, seed data, and code

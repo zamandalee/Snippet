@@ -1,0 +1,40 @@
+/* font-family: 'Montserrat', sans-serif; */
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+}
+
+.top-half {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  min-width: 100%;
+  min-height: 60%;
+  padding: 20px;
+}
+
+.sci-hist {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 15px;
+}
+
+.lower-half {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 100%;
+  min-height: 30%;
+}
+
+.til, .science, .history, .news, .vocab, .brainteaser {
+  border: 1px solid gray;
+  border-radius: 3px;
+  height: 100%;
+  width: 100%;
+}

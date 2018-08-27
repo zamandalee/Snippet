@@ -56,12 +56,12 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 - Finalize proposal README.md
 
 ## Day 1
-- Both:
+- Both
    - Watch all Chrome Extension Tutorials
-- Amanda:
+- Amanda
   - Design display page (that shows up on new tab or new window) to display snippets
   - Make this display page pull from some sort of seed data for now
-- Dustin:
+- Dustin
   - Design preferences page for users (choose snippet categories)
   - Make this page permanently store user preferences with Chrome Storage
 
@@ -76,8 +76,33 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
   - Connect display page to API calls
 
 ## Day 3
+- Amanda
+  - Create dictionary API requests to get details of SAT words
+- Dustin
+  - Create Wikipedia API requests fetching random articles
+- Both:
+  - Connect display to API calls
+
+## Day 4
+- Both
+  - Examine new APIs for facts
+  - Use riddle API for new functionality
+
+## Day 5
+- Amanda
+  - Create local database with Google Chrome Storage to store old Snippets
+- Dustin
+  - Create external database to house user-submitted snippets
+
+## Day 6
+- Both
+  - Continue work with databases for optimized user functionality
+
+## Day 7
 - Assess API scalability with large amounts of users
 - Design Logo
+- Polish design, seed data, and code
+- Polish production README
 
 # Marketing
 - Both members will each share with at least 15 friends and family members

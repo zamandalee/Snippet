@@ -1,5 +1,5 @@
 function historySnippet() {
-  const sciP = document.getElementById("sci-snippet");
+  const hisP = document.getElementById("his-snippet");
 
   const historySnippets = [
     "The Ottoman Empire's Sultan Ibrahim I had 280 of his concubines drowned in the ocean after one of them slept with another man.",
@@ -59,7 +59,7 @@ function historySnippet() {
     "Lord Byron kept a pet bear in his dorm room while studying at Cambridge University."
   ];
 
-  sciP.innerHTML = historySnippets[ Math.floor( Math.random() * historySnippets.length ) ];
+  hisP.innerHTML = historySnippets[ Math.floor( Math.random() * historySnippets.length ) ];
 }
 
 historySnippet();

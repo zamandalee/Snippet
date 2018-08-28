@@ -10,46 +10,51 @@
   </head>
   <body>
 
-    <h1>
-      <!-- <script type="text/javascript">
-        let time = new Date();
-        return `${time.getHours() + ":" + time.getMinutes()}`;
-      </script> -->
-    </h1>
+    <h1 id="currentTime"></h1>
 
-    <div class="top-half">
-      <div class="til">
-        <h3>TIL</h3>
-      </div>
+    <div class="snippets">
 
-      <div class="sci-hist">
-        <div class="science">
-          <h3>SCIENCE</h3>
-          <p id="sci-snippet"></p>
+      <div class="left-half">
+
+        <div class="left-top">
+          <div class="section fact">
+            <h3>SCIENCE</h3>
+            <p id="sci-snippet"></p>
+          </div>
+
+          <!-- <div class="section fact">
+            <h3>TIL</h3>
+          </div> -->
+
+          <!-- <div class="section fact">
+            <h3>HISTORY</h3>
+            <p id="his-snippet"></p>
+          </div> -->
+
+          <div class="section brainteaser">
+            <h3>BRAINTEASER</h3>
+          </div>
         </div>
 
-        <div class="history">
-          <h3>HISTORY</h3>
+
+        <div class="section vocab">
+          <h3>VOCAB</h3>
+          <p id="voc-snippet"></p>
         </div>
+
       </div>
 
-      <div class="news">
+      <div class="section news">
         <h3>NEWS</h3>
       </div>
-    </div>
 
-    <div class="bottom-half">
-      <div class="vocab">
-        <h3>VOCAB | </h3>
-      </div>
-
-      <div class="brainteaser">
-        <h3>BRAINTEASER | </h3>
-      </div>
     </div>
 
 
+    <script src="time.js" type="text/javascript"></script>
     <script src="historySnippet.js" type="text/javascript"></script>
+    <script src="scienceSnippet.js" type="text/javascript"></script>
+    <script src="vocabSnippet.js" type="text/javascript"></script>
 
   </body>
 </html>

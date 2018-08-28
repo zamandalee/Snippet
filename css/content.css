@@ -13,52 +13,77 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-h3 {
+h1 {
   font-family: 'Montserrat', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.snippets {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+h3 {
+  padding-bottom: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
   font-weight: 500;
 }
 
-.top-half {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  min-width: 100%;
-  /* min-height: 60%; */
+p {
+  /* font-family: 'Lato', sans-serif; */
+  font-weight: 300;
 }
 
-.til, .sci-hist, .news {
-  width: 33%;
-}
-
-.sci-hist {
+.left-half {
+  /* margin-right: 10px; */
   display: flex;
   flex-direction: column;
-
-  margin: 0 15px;
-}
-
-.lower-half {
-  display: flex;
-  flex-direction: column;
-
-  min-width: 100%;
-  /* min-height: 30%; */
-}
-
-.vocab, .brainteaser {
-  display: flex;
-  flex-direction: row;
-}
-
-.til, .science, .history, .news, .vocab, .brainteaser {
-  height: 100%;
-  width: 100%;
-  padding: 12px;
   box-sizing: border-box;
-  border: 1px solid white;
+}
+
+.left-top {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  box-sizing: border-box;
+}
+
+.fact {
+  min-width: 50%;
+}
+
+.brainteaser {
+  min-width: 50%;
+  box-sizing: border-box;
+}
+
+.vocab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.vocab h3 {
+  padding-right: 8px;
+  padding-bottom: 0;
+  border-right: 2px solid white;
+}
+
+.vocab p {
+  padding-left: 8px;
+}
+
+.section {
+  margin: 10px;
+  padding: 12px;
   border-radius: 3px;
+  box-sizing: border-box;
 
   background: #6a9db5;
   color: white;

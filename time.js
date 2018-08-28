@@ -9,4 +9,4 @@ function updateTime() {
 }
 
 currentTime();
-setTimeout( updateTime(), 60 - new Date().getSeconds() );
+setTimeout( updateTime, 60 - new Date().getSeconds() );

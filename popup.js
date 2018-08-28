@@ -6,11 +6,9 @@ function toggleButtonColor(id) {
   SELECTORS.forEach((selectedId)=>{
     const button = document.getElementById(selectedId);
     if (selectedId === id) {
-      button.classList.remove('red');
-      button.classList.add('green');
+      button.classList.add('darken');
     } else {
-      button.classList.add('red');
-      button.classList.remove('green');
+      button.classList.remove('darken');
     }
   });
 }

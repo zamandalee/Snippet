@@ -3,12 +3,14 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  font-family: 'Lato', sans-serif;
+  background: #6a9db5;
+  color: #fff;
   width: 220px;
-  font-family: Lato;
 }
 
-p, h1 {
-  margin: 0;
+h1 {
+  font-size: 32px;
 }
 
 .title-div {
@@ -16,6 +18,7 @@ p, h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .button-div {
@@ -23,7 +26,7 @@ p, h1 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 5px;
+  width: 100%;
 }
 
 .check-button-label {
@@ -31,35 +34,18 @@ p, h1 {
   flex-direction: row;
   align-items: center;
   font-size: 25px;
-}
-
-.check-button-label > p {
-  margin-left: 10px;
-}
-
-.check-button {
-  width: 20px;
-  height: 20px;
-  border: 0;
+  width: 100%;
   cursor: pointer;
 }
 
-.check-button:focus {
-  outline-width: 0;
+.check-button-label:hover {
+  background-color: #437389;
 }
 
-.red {
-  background-color: red;
+.check-button-label > p {
+  padding-left: 5px;
 }
 
-.red:hover {
-  background-color: darkred;
-}
-
-.green {
-  background-color: green;
-}
-
-.green:hover {
-  background-color: darkgreen;
+.darken {
+  background-color: #437389;
 }

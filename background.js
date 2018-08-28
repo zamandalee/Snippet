@@ -7,13 +7,12 @@ const defaultPreferences = {
 
 chrome.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.set({preferences: defaultPreferences}, function() {
-    console.log('Default preferences set.');
+    console.log('Default preferences syced.');
   });
 });
 
 chrome.runtime.onMessage.addListener((request) => {
   if (request.type === 'changeFact') {
-    console.log("CHANGING FACT");
     chrome.storage.sync.get('preferences', (currentStore)=>{
       const currentPreferences = currentStore.preferences;
       currentPreferences.fact = request.factType;

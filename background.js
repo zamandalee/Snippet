@@ -11,6 +11,9 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
+// TODO Function checks if there are facts stored for today. If not, calls APIs
+// chrome.runtime.onConnect.addListener()
+
 chrome.runtime.onMessage.addListener((request) => {
   if (request.type === 'changeFact') {
     chrome.storage.sync.get('preferences', (currentStore)=>{

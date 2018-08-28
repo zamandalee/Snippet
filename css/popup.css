@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 220px;
+  font-family: Lato;
+}
+
+p, h1 {
+  margin: 0;
+}
+
+.title-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.check-button-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 25px;
+}
+
+.check-button-label > p {
+  margin-left: 10px;
+}
+
+.check-button {
+  width: 20px;
+  height: 20px;
+  border: 0;
+  cursor: pointer;
+}
+
+.check-button:focus {
+  outline-width: 0;
+}
+
+.red {
+  background-color: red;
+}
+
+.red:hover {
+  background-color: darkred;
+}
+
+.green {
+  background-color: green;
+}
+
+.green:hover {
+  background-color: darkgreen;
+}

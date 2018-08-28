@@ -1,0 +1,33 @@
+
+.news {
+  max-width: 33%;
+  height: 50%;
+}
+
+.news-article {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'PT Serif', serif;
+}
+
+.headline {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.multimedia {
+  width: 90%;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+
+.copyright {
+  font-size: 10px;
+  color: gray;
+}
+
+.abstract {
+  font-size: 15px;
+}

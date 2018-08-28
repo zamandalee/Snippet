@@ -16,15 +16,36 @@ $.ajax({
 
 
 function fiveHomeNews(result) {
-  let headline = document.getElementById("headline");
-  let multimedia = document.getElementById("multimedia");
-  let abstract = document.getElementById("abstract");
-  console.log(result);
+  for (let i = 0; i < 5; i++) {
 
-  // for (let i = 0; i < 5; i++) {
-    headline.innerHTML = result[0].title;
-    multimedia.src = result[0].multimedia[0].url;
-    multimedia.alt = result[0].multimedia[0].caption;
-    abstract.innerHTML = result[0].abstract;
-  // }
+    let headline = document.getElementById(i + "-headline");
+    let multimedia = document.getElementById(i + "-multimedia");
+    let copyright = document.getElementById(i + "-copyright");
+    let abstract = document.getElementById(i + "-abstract");
+
+    headline.innerHTML = result[i].title;
+    multimedia.src = result[i].multimedia[4].url;
+    copyright.innerHTML = result[i].multimedia[4].copyright;
+    abstract.innerHTML = result[i].abstract;
+  }
+}
+
+let slideIndex = 0;
+carousel();
+
+function carousel() {
+    let articles = document.getElementsByClassName("news-article");
+
+    for (let i = 0; i < articles.length; i++) {
+      articles[i].style.display = "none";
+    }
+
+    slideIndex++;
+
+    if (slideIndex > articles.length) {
+      slideIndex = 1;
+    }
+
+    articles[slideIndex - 1].style.display = "block";
+    setTimeout(carousel, 4500);
 }

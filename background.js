@@ -17,6 +17,7 @@ chrome.runtime.onMessage.addListener((request) => {
       const currentPreferences = currentStore.preferences;
       currentPreferences.fact = request.factType;
       chrome.storage.sync.set({preferences: currentPreferences});
+      chrome.tabs.reload();
     });
   }
 });

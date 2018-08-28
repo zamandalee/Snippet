@@ -1,24 +1,23 @@
 /*eslint no-undef: 0*/
 
 const defaultPreferences = {
-  history: true,
-  science: true,
-  til: true,
-  news: true,
+  fact: 'history',
   name: 'FirstName LastName'
 };
 
 chrome.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.set({preferences: defaultPreferences}, function() {
-    console.log('Default preferences set.');
+    console.log('Default preferences syced.');
   });
-  // chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
-  //   chrome.declarativeContent.onPageChanged.addRules([{
-  //     conditions: [new chrome.declarativeContent.PageStateMatcher({
-  //       pageUrl: {hostEquals: 'developer.chrome.com'},
-  //     })
-  //     ],
-  //         actions: [new chrome.declarativeContent.ShowPageAction()]
-  //   }]);
-  // });
+});
+
+chrome.runtime.onMessage.addListener((request) => {
+  if (request.type === 'changeFact') {
+    chrome.storage.sync.get('preferences', (currentStore)=>{
+      const currentPreferences = currentStore.preferences;
+      currentPreferences.fact = request.factType;
+      chrome.storage.sync.set({preferences: currentPreferences});
+      chrome.tabs.reload();
+    });
+  }
 });

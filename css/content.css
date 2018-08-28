@@ -90,3 +90,7 @@ p {
   background: #6a9db5;
   color: white;
 }
+
+.hidden {
+  display: none;
+}

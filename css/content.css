@@ -84,11 +84,13 @@ p {
 .section {
   margin: 10px;
   padding: 12px;
+
+  border: 2px solid gray;
   border-radius: 3px;
   box-sizing: border-box;
 
-  background: #6a9db5;
-  color: white;
+  /* background: #6a9db5; */
+  color: black;
 }
 
 .hidden {

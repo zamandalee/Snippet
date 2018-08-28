@@ -1,13 +1,23 @@
 let timeH1 = document.getElementById("currentTime");
-let time = new Date();
 
-function minsLeadingZeros(dt) {
-  return (time.getMinutes() < 10 ? '0' : '') + time.getMinutes();
+
+function displayTime() {
+  const time = new Date();
+  const hours = time.getHours();
+  const minutes = (time.getMinutes() < 10 ? '0' : '') + time.getMinutes();
+  timeH1.innerHTML = hours + ":" + minutes;
 }
 
-function currentTime() {
-  timeH1.innerHTML = time.getHours() + ":" + minsLeadingZeros();
+function minuteClock() {
+  setInterval(displayTime, 60000);
 }
 
-currentTime();
-setInterval( currentTime, 1000 );
+displayTime();
+
+setTimeout(
+  () => {
+    displayTime();
+    minuteClock();
+  },
+  (60 - (new Date()).getSeconds()) * 1000
+);

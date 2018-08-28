@@ -12,6 +12,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 
 // TODO Function checks if there are facts stored for today. If not, calls APIs
+// Same with image
 // chrome.runtime.onConnect.addListener()
 
 chrome.runtime.onMessage.addListener((request) => {

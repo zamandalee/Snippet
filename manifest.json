@@ -2,16 +2,29 @@
   "manifest_version": 2,
   "name": "Snippet",
   "version": "1.0",
-  "default_locale": "en",
   "description": "Fulfill your curiosity cravings",
   "author": "Amanda Lee & Dustin Pearson",
+  "permissions": ["declarativeContent", "storage"],
   "background": {
-    "persistent": false,
+    "scripts": ["background.js"],
+    "persistent": false
   },
-  "page_action": {
+  "browser_action": {
     "default_popup": "popup.html",
+    "default_icon": {
+    "16": "images/scissors_16.png",
+    "32": "images/scissors_32.png",
+    "48": "images/scissors_48.png",
+    "128": "images/scissors_128.png"
+    }
+  },
+  "icons": {
+    "16": "images/scissors_16.png",
+    "32": "images/scissors_32.png",
+    "48": "images/scissors_48.png",
+    "128": "images/scissors_128.png"
   },
   "chrome_url_overrides" : {
     "newtab": "content.html"
-  },
+  }
 }

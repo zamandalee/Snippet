@@ -75,22 +75,25 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
   - Create Reddit API requests for fetching TIL posts
 - Amanda
   - Create News API requests for top stories
-- Both:
-  - Research interesting APIs for Snippet categories
+- Both
   - Connect display page to API calls
 
-## Day 3: Vocab, more History & Science Seed
+## Day 3: Vocab, Photos
 - Amanda
-  - Create dictionary API requests to get details of SAT words
+  - Finish News API with carousel transitioning, Vocab API
+  - More history seed data
 - Dustin
-  - Create Wikipedia API requests fetching random articles
-- Both:
+  - Photo API
+  - More science seed data
+- Both
   - Connect display to API calls
 
-## Day 4: Brainteasers
-- Both
-  - Examine new APIs for facts
+## Day 4: Brainteasers, Customized Message
+- Amanda
   - Use riddle API for new functionality
+  - Connect display to API calls
+- Dustin
+  - Add "Good morning/good afternoon/good evening, [customized name]!" message
 
 ## Day 5: History
 - Amanda
@@ -98,15 +101,18 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 - Dustin
   - Create external database to house user-submitted snippets
 
-## Day 6 (weekend): Submissions
+## Day 6 (weekend): History cont., Widgets
 - Both
-  - Continue work with databases for optimized user functionality
+  - Finish history work
+- Amanda
+  - Weather widget
+- Dustin
+  - Links, todo widgets
 
 ## Day 7 (weekend): Polish
-- Assess API scalability with large amounts of users
-- Design Logo
-- Polish design, seed data, and code
-- Polish production README
+- Both: polish seed data, and code
+- Amanda: finalize design layout, design logo
+- Dustin: push to Chrome store, production README
 
 # Marketing
 - Both members will each share with at least 15 friends and family members

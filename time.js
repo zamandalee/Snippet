@@ -1,12 +1,13 @@
-function currentTime() {
-  let timeH1 = document.getElementById("currentTime");
-  let time = new Date();
-  timeH1.innerHTML = time.getHours() + ":" + time.getMinutes();
+let timeH1 = document.getElementById("currentTime");
+let time = new Date();
+
+function minsLeadingZeros(dt) {
+  return (time.getMinutes() < 10 ? '0' : '') + time.getMinutes();
 }
 
-function updateTime() {
-  setInterval( currentTime, 60000 );
+function currentTime() {
+  timeH1.innerHTML = time.getHours() + ":" + minsLeadingZeros();
 }
 
 currentTime();
-setTimeout( updateTime, 60 - new Date().getSeconds() );
+setInterval( currentTime, 1000 );

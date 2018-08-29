@@ -40,11 +40,17 @@ function getVocabWord() {
 }
 
 function renderVocabSnippet(result) {
+  let word = result.id;
   const vocWordP = document.getElementById("voc-word");
+  vocWordP.innerHTML = word;
 
+  let partOfSpeech = result.lexicalEntries[1].lexicalCategory;
   const posP = document.getElementById("voc-partofspeech");
+  posP.innerHTML = partOfSpeech;
 
+  let definition = result.lexicalEntries[1].entries[1].senses[1].definitions[1];
   const defP = document.getElementById("voc-def");
+  defP.innerHTML = definition;
 }
 
 getVocabWord();

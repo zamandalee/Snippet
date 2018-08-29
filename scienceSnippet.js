@@ -68,6 +68,19 @@ function scienceSnippet() {
     "In cases of extreme starvation, the brain will begin to eat itself.",
     "When listening to music, your heartbeat will sync with the rhythm.",
     "Your ears and your nose never stop growing.",
+    "We have made completely lab grown meat using stem cells from a cow and cooked the world’s first 100% artificial burger without having to slaughter a cow for the meat.",
+    "A single bolt of lightning contains enough energy to cook 100,000 pieces of toast.",
+    "Human saliva contains a painkiller called opiorphin that is six times more powerful than morphine.",
+    "As a gas, oxygen is odorless and colorless. In its liquid and solid forms, it looks pale blue.",
+    "A cockroach can live 9 days without its head before it starves to death?",
+    "Human teeth are just as strong as shark teeth.",
+    "The average time it takes for plastic to decompose is 450 years. Glass takes 4,000 years!",
+    "Male, and not the female, seahorses give birth to the young ones.",
+    "The longest time between two twins being born is 87 days.",
+    "Everyone has a unique tongue print, just like fingerprints.",
+    "Light doesn't necessarily travel at the 'speed of light'. The slowest we've ever recorded light moving at is 38 mph.",
+    "Hydras tear themselves to create a new mouth opening every time they eat",
+    "The sun emits enough energy in a single second to heat up 3,200-billion-billion hot pockets",
     
   ];
 

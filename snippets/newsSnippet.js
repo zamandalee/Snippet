@@ -39,51 +39,45 @@ function fiveHomeNews(result) {
   }
 }
 
-// window.addEventListener('load', (event) => {
-//   const dots = document.getElementsByClassName("dot");
-//
-//   for (let i = 0; i < dots.length; i++) {
-//     dots[i].addEventListener('click', () => { currentSlide(i); });
-//   }
-// };
+window.addEventListener('load', (event) => {
+  const dots = document.getElementsByClassName("dot");
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].addEventListener('click', () => { selectArticle(i); });
+  }
+});
 
 let slideIndex = 0;
+// let interval;
 carousel(slideIndex);
 
 function selectArticle(num) {
-  console.log("in currentSlide");
   carousel(slideIndex = num);
 }
 
 function carousel(num) {
+  const articles = document.getElementsByClassName("news-article");
+  const dots = document.getElementsByClassName("dot");
 
-    let i;
-    const articles = document.getElementsByClassName("news-article");
-    const dots = document.getElementsByClassName("dot");
+  if (num > articles.length ) {
+    slideIndex = 0;
+  }
 
-    if (num > articles.length) {
-      slideIndex = 0;
-    }
+  for (let i = 0; i < articles.length; i++) {
+     articles[i].style.display = "none";
+  }
 
-    if (num < 1) {
-      slideIndex = articles.length - 1;
-    }
+  slideIndex++;
 
-    for (i = 0; i < articles.length; i++) {
-       articles[i].style.display = "none";
-    }
+  if (slideIndex > articles.length) {
+    slideIndex = 1;
+  }
 
-    slideIndex++;
+  for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
 
-    if (slideIndex > articles.length) {
-      slideIndex = 1;
-    }
-
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    articles[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(carousel, 2000);
+  articles[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  setTimeout(carousel, 4500);
 }

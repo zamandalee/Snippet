@@ -39,6 +39,7 @@ function fiveHomeNews(result) {
   }
 }
 
+// handle dot indicator clicks
 window.addEventListener('load', (event) => {
   const dots = document.getElementsByClassName("dot");
 
@@ -48,18 +49,21 @@ window.addEventListener('load', (event) => {
 });
 
 let slideIndex = 0;
-// let interval;
-carousel(slideIndex);
+carousel();
+let interval = setInterval(carousel, 4000);
 
 function selectArticle(num) {
-  carousel(slideIndex = num);
+  slideIndex = num;
+  clearInterval(interval);
+  carousel();
+  interval = setInterval(carousel, 4000);
 }
 
-function carousel(num) {
+function carousel() {
   const articles = document.getElementsByClassName("news-article");
   const dots = document.getElementsByClassName("dot");
 
-  if (num > articles.length ) {
+  if (slideIndex > articles.length) {
     slideIndex = 0;
   }
 
@@ -74,10 +78,9 @@ function carousel(num) {
   }
 
   for (let i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
 
   articles[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-  setTimeout(carousel, 4500);
 }

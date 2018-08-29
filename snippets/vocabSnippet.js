@@ -1,6 +1,4 @@
-function vocabSnippet() {
-  const vocP = document.getElementById("voc-snippet");
-
+function getVocabWord() {
   const vocabSnippets = ['acumen', 'accrete', 'adroit', 'adumbrate',
     'alacrity', 'antipathy', 'arcane', 'aspersion', 'avarice', 'bellicose',
     'bereft', 'bombastic', 'bourgeois', 'bowdlerize', 'buttress',
@@ -22,7 +20,15 @@ function vocabSnippet() {
     'waif', 'wallydraigle', 'winsome', 'xenophobia', 'yahoo', 'yoke',
     'zany', 'zenith', 'zephyr'];
 
-  vocP.innerHTML = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
+  const vocWord = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
 }
 
-vocabSnippet();
+function renderVocabSnippet(result) {
+  const vocWordP = document.getElementById("voc-word");
+
+  const posP = document.getElementById("voc-partofspeech");
+
+  const defP = document.getElementById("voc-def");
+}
+
+getVocabWord();

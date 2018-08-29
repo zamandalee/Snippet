@@ -2,9 +2,9 @@
 
 const getDailyGreeting = (name) => {
   const hours = Number((new Date()).getHours());
-  if (hours >= 0 && hours <= 12) {
+  if (hours >= 0 && hours < 12) {
     return (`Good Morning, ${name}`);
-  } else if (hours > 12 && hours < 17) {
+  } else if (hours >= 12 && hours < 17) {
     return (`Good Afternoon, ${name}`);
   } else {
     return (`Good Evening, ${name}`);
@@ -19,6 +19,7 @@ chrome.storage.sync.get('preferences', (currentStore) => {
     const promptForm = document.getElementById('prompt-form');
     const promptInput = document.getElementById('prompt-input');
     promptForm.addEventListener('submit', (e) => {
+      e.preventDefault();
       currentPreferences.name = promptInput.value;
       chrome.storage.sync.set({preferences: currentPreferences}, ()=>{
         chrome.tabs.reload();

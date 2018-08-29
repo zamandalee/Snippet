@@ -127,3 +127,13 @@ p {
   background-color: rgba(0,0,0, .35);
   z-index: -1;
 }
+
+#prompt-input {
+  color: #fff;
+  font-size: 32px;
+}
+
+#greeting-h2 {
+  color: #fff;
+  font-size: 32px;
+}

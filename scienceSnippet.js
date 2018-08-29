@@ -51,7 +51,24 @@ function scienceSnippet() {
     "The weight of the average fluffy, cumulus cloud is a little over a million pounds. Clouds are made up of tiny drops of water dispersed over a large area (much larger than it seems from the ground) and water is very heavy.",
     "Up until the 1960's, doctors determined if a woman was pregnant by injecting her urine into a female frog. If the frog laid eggs within a day (due to the hormones in the pregnant woman's urine), it was considered positive.",
     "African Elephants are pregnant for 22 months. It's the longest gestation of any mammal. Some sharks, which are not mammals, can carry their young for over three years.",
-    "There is a species of beetle - the Bombardier Beetle - that shoots a boiling hot chemical mixture at its enemies by mixing hydroquinone and hydrogen peroxide together, which are stored separately in the beetle's abdomen until needed."
+    "There is a species of beetle - the Bombardier Beetle - that shoots a boiling hot chemical mixture at its enemies by mixing hydroquinone and hydrogen peroxide together, which are stored separately in the beetle's abdomen until needed.",
+    "Giant penguins about the size of a grown man waddled around New Zealand about 59 million years ago.",
+    "The world’s smallest fidget spinner is 100 microns wide.",
+    "Great apes, including chimpanzees and orangutans, have absolutely no appreciation of music whatsoever.",
+    "Bees have been shown to understand the concept of zero",
+    "Polar Bears can run at 25 miles an hour and jump over 6 feet in the air",
+    "Butterflies taste with their hind feet, and their taste sensation works on touch – this allows them to determine whether a leaf is edible",
+    "You'd be better off surviving a grenade on land rather than underwater",
+    "The spine can elongate by around 3% when in space, which is why humans grow taller in space.",
+    "If you eat a polar bear liver, you will die due to the vitamin A content.",
+    "Crows can recognize human faces and hold a grudge against the ones they don't like.",
+    "Elephants have been shown to complete teamwork exercises faster than the humans who designed the expiriment",
+    "Between birth and death, the human body goes from having 300 bones, to just 206.",
+    "When you blush, the inside of your stomach does too.",
+    "In cases of extreme starvation, the brain will begin to eat itself.",
+    "When listening to music, your heartbeat will sync with the rhythm.",
+    "Your ears and your nose never stop growing.",
+    
   ];
 
   sciP.innerHTML = scienceSnippets[ Math.floor( Math.random() * scienceSnippets.length ) ];

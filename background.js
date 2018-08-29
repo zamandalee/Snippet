@@ -2,7 +2,7 @@
 
 const defaultPreferences = {
   fact: 'history',
-  name: 'FirstName LastName'
+  name: ""
 };
 
 chrome.runtime.onInstalled.addListener(function() {

@@ -17,18 +17,25 @@ $.ajax({
 
 
 function fiveHomeNews(result) {
-  for (let i = 0; i < 5; i++) {
+  let counter = 0;
+  let idx = 0;
 
-    let headline = document.getElementById(i + "-headline");
-    let multimedia = document.getElementById(i + "-multimedia");
-    let copyright = document.getElementById(i + "-copyright");
-    let abstract = document.getElementById(i + "-abstract");
+  while (counter < 5) {
+    let headline = document.getElementById(counter + "-headline");
+    let multimedia = document.getElementById(counter + "-multimedia");
+    let copyright = document.getElementById(counter + "-copyright");
+    let abstract = document.getElementById(counter + "-abstract");
 
-    headline.innerHTML = result[i].title;
-    headline.href = result[i].url;
-    multimedia.src = result[i].multimedia[4].url;
-    copyright.innerHTML = result[i].multimedia[4].copyright;
-    abstract.innerHTML = result[i].abstract;
+    if ( result[idx].title && result[idx].url && result[idx].multimedia[4]
+      && result[idx].multimedia[4].copyright && result[idx].abstract ) {
+       headline.innerHTML = result[idx].title;
+       headline.href = result[idx].url;
+       multimedia.src = result[idx].multimedia[4].url;
+       copyright.innerHTML = result[idx].multimedia[4].copyright;
+       abstract.innerHTML = result[idx].abstract;
+       counter++;
+    }
+    idx++;
   }
 }
 

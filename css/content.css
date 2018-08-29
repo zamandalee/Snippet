@@ -30,6 +30,7 @@ h1 {
   flex-direction: row;
   justify-content: center;
   box-sizing: border-box;
+  height: 55%;
 }
 
 h3 {

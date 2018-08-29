@@ -1,6 +1,6 @@
 .news {
   width: 33%;
-  height: 65%;
+  height: 100%;
 }
 
 .news-article {
@@ -13,6 +13,10 @@
 }
 
 #carousel {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
   padding-left: 10px;
 }
 

@@ -32,34 +32,35 @@ function fiveHomeNews(result) {
   }
 }
 
-// news article carouselling
-// let slideIndex = 0;
-// carousel();
+// window.addEventListener('load', (event) => {
+//   const dots = document.getElementsByClassName("dot");
 //
-// function carousel(n) {
-//   let articles = document.getElementsByClassName("news-article");
-//
-//   for (let i = 0; i < articles.length; i++) {
-//     articles[i].style.display = "none";
+//   for (let i = 0; i < dots.length; i++) {
+//     dots[i].addEventListener('click', () => { currentSlide(i); });
 //   }
-//
-//   slideIndex++;
-//
-//   if (slideIndex > articles.length) {
-//     slideIndex = 1;
-//   }
-//
-//   articles[slideIndex - 1].style.display = "block";
-//   setTimeout(carousel, 4500);
-// }
+// };
 
 let slideIndex = 0;
-showSlides();
+carousel(slideIndex);
 
-function showSlides() {
+function selectArticle(num) {
+  console.log("in currentSlide");
+  carousel(slideIndex = num);
+}
+
+function carousel(num) {
+
     let i;
     const articles = document.getElementsByClassName("news-article");
     const dots = document.getElementsByClassName("dot");
+
+    if (num > articles.length) {
+      slideIndex = 0;
+    }
+
+    if (num < 1) {
+      slideIndex = articles.length - 1;
+    }
 
     for (i = 0; i < articles.length; i++) {
        articles[i].style.display = "none";
@@ -77,5 +78,5 @@ function showSlides() {
 
     articles[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 2000);
+    setTimeout(carousel, 2000);
 }

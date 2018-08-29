@@ -52,16 +52,15 @@ p {
 .left-top {
   display: flex;
   flex-direction: row;
-  width: 95%;
   box-sizing: border-box;
 }
 
 .fact {
-  min-width: 50%;
+  width: 50%;
 }
 
 .brainteaser {
-  min-width: 50%;
+  width: 50%;
   box-sizing: border-box;
 }
 

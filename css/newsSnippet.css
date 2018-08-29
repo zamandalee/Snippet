@@ -1,6 +1,6 @@
 .news {
-  max-width: 33%;
-  height: 50%;
+  width: 33%;
+  /* height: 450px; */
 }
 
 .news-article {
@@ -51,8 +51,9 @@
   border-radius: 50%;
   background-color: #ccc;
   transition: background-color 0.4s ease;
+  cursor: pointer;
 }
 
-.active {
+.dot:hover, .active {
   background-color: #888;
 }

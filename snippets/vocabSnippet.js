@@ -21,6 +21,22 @@ function getVocabWord() {
     'zany', 'zenith', 'zephyr'];
 
   const vocWord = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
+
+  const url = `https://od-api.oxforddictionaries.com/api/v1/entries/en/${vocWord}`;
+
+  $.ajax({
+    url: url,
+    method: 'GET',
+    data: {
+      app_id: '2b9cea8c',
+      app_key: 'd1ab5e609892b9e47be76b2fee2d40ba'
+    }
+  }).done( result => {
+    result = result.results[1];
+    renderVocabSnippet(result);
+  }).fail( err => {
+    throw err;
+  });
 }
 
 function renderVocabSnippet(result) {

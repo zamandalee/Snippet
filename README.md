@@ -29,13 +29,19 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 - [ ] Categories and data for the following categories: science, history, vocabulary, fun fact/miscellaneous (from Reddit TIL), top 5 NYT trending news stories (will be dynamically updating)
 - [ ] Have the user customize the categories of Snippets they would like on their homepage
 - [ ] Snippets are updated daily
-- [ ] Allow for users to submit snippets: form to send a link (ex.: a Wikipedia link) that will be curated if it fits a category
+- [ ] Ensure same content each day for a computer
+- [ ] Google Earth images/National Geographic/etc. API for background behind the snippet
 
 ## Bonus Features
-- [ ] Use external database to ensure same content each day for every computer
-- [ ] Allow users to see their Snippet history
-- [ ] Custom styling for their homepage
-- [ ] Google Earth images/National Geographic/etc. API for background behind the snippet
+- User customizable
+  - [ ] Allow users to see their Snippet history (1)
+  - [ ] Favorite capabilities (3)
+  - [ ] Custom styling for their homepage (5)
+- [ ] Styling
+  - [ ] Before-loaded gray boxes (like on LinkedIn) (4)
+  - [ ] Flippable vocab and brainteaser (2)
+- [ ] Use external database (6)
+  - [ ] Allow for users to submit snippets: form to send a link (ex.: a Wikipedia link) that will be curated if it fits a category
 
 # Technologies and Technical Challenges
 - JavaScript
@@ -43,6 +49,7 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 - Google Chrome API (Storage, ...)
 - Reddit API
 - News API
+- Vocabulary API
 
 # Weekend Accomplishments
 - All team members completed sample Google Chrome extension
@@ -53,68 +60,68 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 # Timeline
 
 ## Weekend
-- Compile 15 Snippets for each category
-- Explore APIs to leverage for seed data for each category (esp. for the live news)
-- Do sample Google Chrome extension
-- Finalize proposal README.md
+- [X] Compile 15 Snippets for each category
+- [X] Explore APIs to leverage for seed data for each category (esp. for the live news)
+- [X] Do sample Google Chrome extension
+- [X] Finalize proposal README.md
 
 ## Day 1: Setup, Seed
 - Both
-   - Watch all Chrome Extension Tutorials
-   - Setup for Chrome extension (manifest, background, popup files)
+   - [X] Watch all Chrome Extension Tutorials
+   - [X] Setup for Chrome extension (manifest, background, popup files)
 - Amanda
-  - Design display page (that shows up on new tab or new window) to display snippets
-  - Make this display page pull from some sort of seed data for now
+  - [X] Design display page (that shows up on new tab or new window) to display snippets
+  - [X] Make this display page pull from some sort of seed data for now
 - Dustin
-  - Design preferences page for users (choose snippet categories)
-  - Make this page permanently store user preferences with Chrome Storage
-
+  - [X] Design preferences page for users (choose snippet categories)
+  - [X] Make this page permanently store user preferences with Chrome Storage
 
 ## Day 2: TIL, News
 - Dustin
-  - Create Reddit API requests for fetching TIL posts
+  - [X] Create Reddit API requests for fetching TIL posts
 - Amanda
-  - Create News API requests for top stories
+  - [X] Create News API requests for top stories
 - Both
-  - Connect display page to API calls
+  - [X] Connect display page to API calls
 
 ## Day 3: Vocab, Photos
 - Amanda
-  - Finish News API with carousel transitioning, Vocab API
-  - More history seed data
+  - [X] Finish News API with carousel transitioning
+  - [ ] Vocab API
+  - [ ] More history seed data
 - Dustin
-  - Photo API
-  - More science seed data
+  - [ ] Add "Good morning/good afternoon/good evening, [customized name]!" message
+  - [ ] More science seed data
 - Both
-  - Connect display to API calls
+  - [ ] Connect display to API calls
 
 ## Day 4: Brainteasers, Customized Message
 - Amanda
-  - Use riddle API for new functionality
-  - Connect display to API calls
+  - [ ] Use riddle API for new functionality
+  - [ ] Connect display to API calls
 - Dustin
-  - Add "Good morning/good afternoon/good evening, [customized name]!" message
+  - [ ] Finish customized message, initial settings page
 
-## Day 5: History
+## Day 5: History, Favorites
 - Amanda
-  - Create local database with Google Chrome Storage to store old Snippets
+  - [ ] Add favorited functionality
 - Dustin
-  - Create external database to house user-submitted snippets
+  - [ ] Create local database with Google Chrome Storage to store old Snippets
 
-## Day 6 (weekend): History cont., Widgets
+## Day 6 (weekend): Day 5 cont., Widgets
 - Both
-  - Finish history work
+  - [ ] Finish history/favorites work
 - Amanda
-  - Weather widget
+  - [ ] Weather widget
 - Dustin
-  - Links, todo widgets
+  - [ ] Links, todo widgets
 
 ## Day 7 (weekend): Polish
-- Both: polish seed data, and code
-- Amanda: finalize design layout, design logo
-- Dustin: push to Chrome store, production README
+- [ ] Both: polish seed data, and code
+- [ ] Amanda: finalize design layout, design logo
+- [ ] Dustin: push to Chrome store, production README
 
 # Marketing
-- Both members will each share with at least 15 friends and family members
-- Get 18 users from App Academy
-- Dustin will post on LinkedIn about it, Amanda will on Facebook
+- [ ] Both members will each share with at least 15 friends and family members
+- [ ] Get 18 users from App Academy
+- [ ] Dustin will post on LinkedIn about it, Amanda will on Facebook

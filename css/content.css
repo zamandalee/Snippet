@@ -11,7 +11,7 @@ body {
 
   height: 100vh;
   width: 100vw;
-  padding: 20px;
+  padding: 20px 100px;
   box-sizing: border-box;
 
   font-family: 'Lato', sans-serif;
@@ -20,7 +20,7 @@ body {
 h1 {
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 120px;
+  font-size: 130px;
   font-weight: bold;
   text-align: center;
   color: white;
@@ -32,19 +32,6 @@ h1 {
   justify-content: center;
   box-sizing: border-box;
   height: 55%;
-}
-
-h3 {
-  padding-bottom: 6px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-}
-
-p {
-  /* font-family: 'Lato', sans-serif; */
-  font-size: 20px;
-  font-weight: 300;
 }
 
 .left-half {
@@ -61,6 +48,35 @@ p {
   flex-direction: row;
   box-sizing: border-box;
 }
+
+.section {
+  margin: 10px;
+  padding: 12px;
+
+  border-radius: 3px;
+  box-sizing: border-box;
+
+  background: #e3e9f2;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+h3 {
+  padding-bottom: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+p {
+  /* font-family: 'Lato', sans-serif; */
+  font-size: 20px;
+  font-weight: 300;
+}
+
 
 .fact {
   width: 50%;
@@ -85,19 +101,4 @@ p {
 
 .vocab p {
   padding-left: 8px;
-}
-
-.section {
-  margin: 10px;
-  padding: 12px;
-
-  border-radius: 3px;
-  box-sizing: border-box;
-
-  background: #e3e9f2;
-  color: black;
-}
-
-.hidden {
-  display: none;
 }

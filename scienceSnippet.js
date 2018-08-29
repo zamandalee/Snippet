@@ -60,6 +60,15 @@ function scienceSnippet() {
     "Butterflies taste with their hind feet, and their taste sensation works on touch – this allows them to determine whether a leaf is edible",
     "You'd be better off surviving a grenade on land rather than underwater",
     "The spine can elongate by around 3% when in space, which is why humans grow taller in space.",
+    "If you eat a polar bear liver, you will die due to the vitamin A content.",
+    "Crows can recognize human faces and hold a grudge against the ones they don't like.",
+    "Elephants have been shown to complete teamwork exercises faster than the humans who designed the expiriment",
+    "Between birth and death, the human body goes from having 300 bones, to just 206.",
+    "When you blush, the inside of your stomach does too.",
+    "In cases of extreme starvation, the brain will begin to eat itself.",
+    "When listening to music, your heartbeat will sync with the rhythm.",
+    "Your ears and your nose never stop growing.",
+    
   ];
 
   sciP.innerHTML = scienceSnippets[ Math.floor( Math.random() * scienceSnippets.length ) ];

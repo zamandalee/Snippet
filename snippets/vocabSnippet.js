@@ -2,7 +2,7 @@ function getVocabWord() {
   const vocabSnippets = ['acumen', 'accrete', 'adroit', 'adumbrate',
     'alacrity', 'antipathy', 'arcane', 'aspersion', 'avarice', 'bellicose',
     'bereft', 'bombastic', 'bourgeois', 'bowdlerize', 'buttress',
-    'byzantine', 'cajole', 'capacious', 'carouse', 'castigate', 'caucus',
+    'byzantine', 'cajole', 'capacious', 'carouse', 'castigate',
     'circuitous', 'circumvent', 'clement', 'clout', 'commodious', 'concord',
     'congruous', 'convivial', 'corroborate', 'delineate', 'diffident',
     'dilatory', 'egregious', 'ephemeral', 'esoteric', 'ethereal',
@@ -29,9 +29,13 @@ function getVocabWord() {
 
 
 function renderVocabSnippet(result) {
-  let partOfSpeech = result.lexicalEntries[0].lexicalCategory.toUpperCase();
-  if (partOfSpeech === 'ADJECTIVE') {
-    partOfSpeech = 'ADJ.';
+  let partOfSpeech = result.lexicalEntries[0].lexicalCategory;
+  if (partOfSpeech === 'Adjective') {
+    partOfSpeech = 'adj.';
+  } else if (partOfSpeech === 'Noun') {
+    partOfSpeech = 'n.';
+  } else if (partOfSpeech === 'Verb') {
+    partOfSpeech = "v.";
   }
   const posP = document.getElementById("voc-partofspeech");
   posP.innerHTML = partOfSpeech;

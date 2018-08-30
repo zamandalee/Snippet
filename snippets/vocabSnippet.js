@@ -1,8 +1,8 @@
 function getVocabWord() {
-  const vocabSnippets = ['acumen', 'accrete', 'adroit', 'adumbrate',
-    'alacrity', 'antipathy', 'arcane', 'aspersion', 'avarice', 'bellicose',
-    'bereft', 'bombastic', 'bourgeois', 'bowdlerize', 'buttress',
-    'byzantine', 'cajole', 'capacious', 'carouse', 'castigate',
+  const vocabSnippets = ['abeyance', 'abnegate', 'acrimonious', 'acumen',
+    'accrete', 'adroit', 'adumbrate', 'alacrity', 'antipathy', 'arcane',
+    'aspersion', 'avarice', 'bellicose', 'bereft', 'bombastic', 'bourgeois',
+    'bowdlerize', 'buttress', 'cajole', 'capacious', 'carouse', 'castigate',
     'circuitous', 'circumvent', 'clement', 'clout', 'commodious', 'concord',
     'congruous', 'convivial', 'corroborate', 'delineate', 'diffident',
     'dilatory', 'egregious', 'ephemeral', 'esoteric', 'ethereal',
@@ -17,7 +17,7 @@ function getVocabWord() {
     'reprobate', 'ribald', 'rife', 'sophomoric', 'splendiferous', 'staid',
     'sublimity', 'surfeit', 'sycophant', 'truculent', 'turgid', 'umbrage',
     'unctuous', 'variegated', 'venal', 'veracity', 'verdant', 'vituperate',
-    'waif', 'wallydraigle', 'winsome', 'xenophobia', 'yahoo', 'yoke',
+    'vivify', 'waif', 'wallydraigle', 'winsome', 'xenophobia', 'yahoo', 'yoke',
     'zany', 'zenith', 'zephyr'];
 
   const vocWord = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
@@ -29,14 +29,15 @@ function getVocabWord() {
 
 
 function renderVocabSnippet(result) {
-  let partOfSpeech = result.lexicalEntries[0].lexicalCategory;
-  if (partOfSpeech === 'Adjective') {
+  let partOfSpeech = result.lexicalEntries[0].lexicalCategory.toLowerCase();
+  if (partOfSpeech === 'adjective') {
     partOfSpeech = 'adj.';
-  } else if (partOfSpeech === 'Noun') {
-    partOfSpeech = 'n.';
-  } else if (partOfSpeech === 'Verb') {
-    partOfSpeech = "v.";
   }
+  // else if (partOfSpeech === 'Noun') {
+  //   partOfSpeech = 'n.';
+  // } else if (partOfSpeech === 'Verb') {
+  //   partOfSpeech = "v.";
+  // }
   const posP = document.getElementById("voc-partofspeech");
   posP.innerHTML = partOfSpeech;
 
@@ -52,3 +53,11 @@ function renderVocabSnippet(result) {
 }
 
 getVocabWord();
+
+// for click/flip functionality
+const vocabBox = document.getElementsByClassName("vocab")[0];
+vocabBox.addEventListener('click', (event) => {
+  console.log("clicked");
+
+  vocabBox.classList.toggle('hover');
+});

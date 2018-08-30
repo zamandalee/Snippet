@@ -42,11 +42,20 @@
         </div>
 
 
-        <div class="section vocab">
-          <h3>VOCAB</h3>
-          <p id="voc-word"></p>
-          <p id="voc-partofspeech"></p>
-          <p id="voc-def"></p>
+        <div class="section vocab" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <h3>WORD OF THE DAY</h3>
+              <p id="voc-partofspeech"></p>
+              <p id="voc-word"></p>
+              <!-- <p class="click-me">(click me!)</p> -->
+              <!-- <p class="hidden" id="voc-def"></p> -->
+            </div>
+            <div class="back">
+              <h3>WORD OF THE DAY</h3>
+              <p id="voc-def"></p>
+            </div>
+          </div>
         </div>
 
       </div>

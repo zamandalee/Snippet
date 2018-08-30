@@ -87,22 +87,64 @@ p {
   box-sizing: border-box;
 }
 
-.vocab {
+.front, .back {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.vocab h3 {
-  padding-right: 8px;
+.front h3, .back h3 {
+  padding-right: 25px;
   padding-bottom: 0;
   border-right: 2px solid #474747;
 }
 
-.vocab p {
-  padding-left: 10px;
+#voc-partofspeech, #voc-def {
+  padding-left: 25px;
 }
 
 #voc-word {
+  padding-left: 15px;
   font-weight: 400;
+}
+
+.click-me {
+  padding-left: 15px;
+}
+
+.vocab:hover, .brainteaser:hover {
+  background: #c7cdd6;
+  cursor: pointer;
+  transform: scale(1.015);
+  transition: all .2s ease-in-out;
+}
+
+.vocab {
+  /* perspective: 1000px; */
+}
+
+.vocab.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  /* position: relative; */
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
 }

@@ -4,9 +4,9 @@
   "version": "1.0",
   "description": "Fulfill your curiosity cravings",
   "author": "Amanda Lee & Dustin Pearson",
-  "permissions": ["tabs", "declarativeContent", "storage"],
+  "permissions": ["tabs", "declarativeContent", "storage", "https://od-api.oxforddictionaries.com/*"],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["jquery-3.3.1.min.js", "background.js"],
     "persistent": false
   },
   "browser_action": {

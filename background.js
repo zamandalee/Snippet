@@ -25,3 +25,20 @@ chrome.runtime.onMessage.addListener((request) => {
     });
   }
 });
+
+$.ajax({
+  url: "https://od-api.oxforddictionaries.com/api/v1/entries/en/zephyr",
+  method: 'GET',
+  // dataType: 'jsonp',
+  headers: {
+    // 'Accept': 'application/json',
+    'app_id': '2b9cea8c',
+    'app_key': 'd1ab5e609892b9e47be76b2fee2d40ba'
+  },
+  // contentType: 'application/json; charset=utf-8'
+}).done( result => {
+  result = result.results[0];
+  // renderVocabSnippet(result);
+}).fail( err => {
+  throw err;
+});

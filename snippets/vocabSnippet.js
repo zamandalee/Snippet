@@ -21,34 +21,65 @@ function getVocabWord() {
     'zany', 'zenith', 'zephyr'];
 
   const vocWord = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
+  const url = `https://od-api.oxforddictionaries.com/api/v1/entries/en/${vocWord}/`;
 
-  const url = `https://od-api.oxforddictionaries.com/api/v1/entries/en/${vocWord}`;
 
-  $.ajax({
-    url: url,
-    method: 'GET',
-    data: {
-      app_id: '2b9cea8c',
-      app_key: 'd1ab5e609892b9e47be76b2fee2d40ba'
-    }
-  }).done( result => {
-    result = result.results[1];
-    renderVocabSnippet(result);
-  }).fail( err => {
-    throw err;
-  });
 }
 
+// Create the XHR object.
+// function createCORSRequest(method, url) {
+//   var xhr = new XMLHttpRequest();
+//   if ("withCredentials" in xhr) {
+//     // XHR for Chrome/Firefox/Opera/Safari.
+//     xhr.open(method, url, true);
+//   } else if (typeof XDomainRequest != "undefined") {
+//     // XDomainRequest for IE.
+//     xhr = new XDomainRequest();
+//     xhr.open(method, url);
+//   } else {
+//     // CORS not supported.
+//     xhr = null;
+//   }
+//   return xhr;
+// }
+
+// Make the actual CORS request.
+// function makeCorsRequest() {
+//   // This is a sample server that supports CORS.
+//   var url = 'https://od-api.oxforddictionaries.com/api/v1/entries/en/zephyr';
+//
+//   var xhr = createCORSRequest('GET', url);
+//   if (!xhr) {
+//     alert('CORS not supported');
+//     return;
+//   }
+//
+//   // Response handlers.
+//   xhr.onload = function() {
+//     var text = xhr.responseText;
+//     alert('Response from CORS request to ' + url + ': ');
+//   };
+//
+//   xhr.onerror = function() {
+//     alert('Woops, there was an error making the request.');
+//   };
+//
+//   xhr.send();
+// }
+
 function renderVocabSnippet(result) {
+  console.log("in render voc snippet");
+
   let word = result.id;
   const vocWordP = document.getElementById("voc-word");
   vocWordP.innerHTML = word;
 
-  let partOfSpeech = result.lexicalEntries[1].lexicalCategory;
+  let partOfSpeech = result.lexicalEntries[0].lexicalCategory.toUpperCase();
   const posP = document.getElementById("voc-partofspeech");
   posP.innerHTML = partOfSpeech;
 
-  let definition = result.lexicalEntries[1].entries[1].senses[1].definitions[1];
+  // remove period at the end of definition
+  let definition = result.lexicalEntries[0].entries[0].senses[0].definitions[0].slice(0, -1);
   const defP = document.getElementById("voc-def");
   defP.innerHTML = definition;
 }

@@ -1,5 +1,5 @@
 function scienceSnippet() {
-  const sciP = document.getElementById("sci-snippet");
+  const sciP = document.getElementById("fact-snippet");
 
   const scienceSnippets = [
     "Octopuses have three hearts, nine brains, and blue blood.",
@@ -81,10 +81,8 @@ function scienceSnippet() {
     "Light doesn't necessarily travel at the 'speed of light'. The slowest we've ever recorded light moving at is 38 mph.",
     "Hydras tear themselves to create a new mouth opening every time they eat",
     "The sun emits enough energy in a single second to heat up 3,200-billion-billion hot pockets",
-    
+
   ];
 
   sciP.innerHTML = scienceSnippets[ Math.floor( Math.random() * scienceSnippets.length ) ];
 }
-
-scienceSnippet();

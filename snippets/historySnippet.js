@@ -1,5 +1,5 @@
 const historySnippet = () => {
-  const hisP = document.getElementById("his-snippet");
+  const hisP = document.getElementById("fact-snippet");
 
   const historySnippets = [
     "The Ottoman Empire's Sultan Ibrahim I had 280 of his concubines drowned in the ocean after one of them slept with another man.",
@@ -60,5 +60,3 @@ const historySnippet = () => {
 
   hisP.innerHTML = historySnippets[ Math.floor( Math.random() * historySnippets.length ) ];
 };
-
-historySnippet();

@@ -33,7 +33,19 @@
 
         <div class="left-top">
           <!-- TODO Tabs that switch current fact  -->
-          <div id="science" class="section fact hidden">
+          <div id="fact" class="section fact">
+            <div class="tab-flex">
+              <button class="fact-tab selected-tab" id="his-tab">HISTORY</button>
+              <button class="fact-tab" id="sci-tab">SCIENCE</button>
+              <button class="fact-tab" id="mis-tab">MISC.</button>
+            </div>
+            <div class="fact-div">
+              <p id="fact-snippet"></p>
+            </div>
+          </div>
+
+
+          <!-- <div id="science" class="section fact hidden">
             <h3>SCIENCE</h3>
             <p id="sci-snippet"></p>
           </div>
@@ -46,7 +58,7 @@
           <div id="history" class="section fact hidden">
             <h3>HISTORY</h3>
             <p id="his-snippet"></p>
-          </div>
+          </div> -->
 
           <div class="section brainteaser">
             <h3>BRAINTEASER</h3>

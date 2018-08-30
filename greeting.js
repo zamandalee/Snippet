@@ -18,6 +18,7 @@ chrome.storage.sync.get('preferences', (currentStore) => {
     prompt.classList.remove('hidden');
     const promptForm = document.getElementById('prompt-form');
     const promptInput = document.getElementById('prompt-input');
+    // DISPLAY Xs
     promptForm.addEventListener('submit', (e) => {
       e.preventDefault();
       currentPreferences.name = promptInput.value;
@@ -26,6 +27,7 @@ chrome.storage.sync.get('preferences', (currentStore) => {
       });
     });
   } else {
+    // Don't display Xs
     const greeting = document.getElementById('greeting');
     const greetingText = getDailyGreeting(currentPreferences.name);
     const greetingH2 = document.getElementById('greeting-h2');

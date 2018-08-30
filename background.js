@@ -1,8 +1,8 @@
 /*eslint no-undef: 0*/
 
 const defaultPreferences = {
-  fact: 'history',
-  name: ""
+  fact: '',
+  name: ''
 };
 
 chrome.runtime.onInstalled.addListener(function() {

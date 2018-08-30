@@ -16,29 +16,31 @@ chrome.runtime.onInstalled.addListener(function() {
 // chrome.runtime.onConnect.addListener()
 
 chrome.runtime.onMessage.addListener((request) => {
-  if (request.type === 'changeFact') {
-    chrome.storage.sync.get('preferences', (currentStore)=>{
-      const currentPreferences = currentStore.preferences;
-      currentPreferences.fact = request.factType;
-      chrome.storage.sync.set({preferences: currentPreferences});
-      chrome.tabs.reload();
-    });
+  switch( request.type ) {
+    case 'changeFact':
+      chrome.storage.sync.get('preferences', (currentStore) => {
+        const currentPreferences = currentStore.preferences;
+        currentPreferences.fact = request.factType;
+        chrome.storage.sync.set({preferences: currentPreferences});
+        chrome.tabs.reload();
+      });
+      break;
+    case 'getVocabWord':
+      // send ajax requestion to oxford dictionary for vocabSnippet
+      $.ajax({
+        url: `https://od-api.oxforddictionaries.com/api/v1/entries/en/${vocWord}/`,
+        method: 'GET',
+        headers: {
+          'app_id': '2b9cea8c',
+          'app_key': 'd1ab5e609892b9e47be76b2fee2d40ba'
+        },
+      });
   }
 });
 
-$.ajax({
-  url: "https://od-api.oxforddictionaries.com/api/v1/entries/en/zephyr",
-  method: 'GET',
-  // dataType: 'jsonp',
-  headers: {
-    // 'Accept': 'application/json',
-    'app_id': '2b9cea8c',
-    'app_key': 'd1ab5e609892b9e47be76b2fee2d40ba'
-  },
-  // contentType: 'application/json; charset=utf-8'
-}).done( result => {
-  result = result.results[0];
-  // renderVocabSnippet(result);
-}).fail( err => {
-  throw err;
-});
+// .done( result => {
+//   // result = result.results[0];
+//   // renderVocabSnippet(result);
+// }).fail( err => {
+//   throw err;
+// });

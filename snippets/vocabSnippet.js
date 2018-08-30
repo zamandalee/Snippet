@@ -17,7 +17,7 @@ function getVocabWord() {
     'reprobate', 'ribald', 'rife', 'sophomoric', 'splendiferous', 'staid',
     'sublimity', 'surfeit', 'sycophant', 'truculent', 'turgid', 'umbrage',
     'unctuous', 'variegated', 'venal', 'veracity', 'verdant', 'vituperate',
-    'vivify', 'waif', 'wallydraigle', 'winsome', 'xenophobia', 'yahoo', 'yoke',
+    'vivify', 'waif', 'wallydraigle', 'winsome', 'xenophobia', 'yahoo',
     'zany', 'zenith', 'zephyr'];
 
   const vocWord = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
@@ -58,6 +58,15 @@ getVocabWord();
 const vocabBox = document.getElementsByClassName("flipper-container")[0];
 vocabBox.addEventListener('click', (event) => {
   console.log("clicked");
-
   vocabBox.classList.toggle('hover');
+
+  const front = document.getElementsByClassName("front")[0];
+  const back = document.getElementsByClassName("back")[0];
+  if (document.getElementsByClassName("flipper-container hover")[0]) {
+    front.style.display = "none";
+    back.style.display = "flex";
+  } else {
+    front.style.display = "flex";
+    back.style.display = "none";
+  }
 });

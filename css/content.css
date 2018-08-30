@@ -77,7 +77,6 @@ p {
   font-weight: 300;
 }
 
-
 .fact {
   width: 50%;
 }
@@ -108,7 +107,7 @@ p {
   font-weight: 400;
 }
 
-.vocab:hover, .hover:hover, .brainteaser:hover {
+.flipper-container:hover, .brainteaser:hover {
   background: #c7cdd6;
   cursor: pointer;
   transform: scale(1.015);
@@ -127,7 +126,6 @@ p {
 
 .front, .back {
   backface-visibility: hidden;
-  position: absolute;
   top: 0;
   left: 0;
 }
@@ -139,4 +137,5 @@ p {
 
 .back {
   transform: rotateY(180deg);
+  display: none;
 }

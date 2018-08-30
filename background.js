@@ -15,7 +15,7 @@ chrome.runtime.onInstalled.addListener(function() {
 // Same with image
 // chrome.runtime.onConnect.addListener()
 
-chrome.runtime.onMessage.addListener((request) => {
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   switch( request.type ) {
     case 'changeFact':
       chrome.storage.sync.get('preferences', (currentStore) => {
@@ -25,22 +25,19 @@ chrome.runtime.onMessage.addListener((request) => {
         chrome.tabs.reload();
       });
       break;
+
     case 'getVocabWord':
       // send ajax requestion to oxford dictionary for vocabSnippet
       $.ajax({
-        url: `https://od-api.oxforddictionaries.com/api/v1/entries/en/${vocWord}/`,
+        url: `https://od-api.oxforddictionaries.com/api/v1/entries/en/${request.word}`,
         method: 'GET',
         headers: {
           'app_id': '2b9cea8c',
           'app_key': 'd1ab5e609892b9e47be76b2fee2d40ba'
         },
+      }).done( result => {
+        sendResponse({result: result.results[0]});
       });
   }
+  return true; //necessary for sendResponse() to be valid
 });
-
-// .done( result => {
-//   // result = result.results[0];
-//   // renderVocabSnippet(result);
-// }).fail( err => {
-//   throw err;
-// });

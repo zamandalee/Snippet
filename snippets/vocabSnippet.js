@@ -23,24 +23,26 @@ function getVocabWord() {
   const vocWord = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
 
   chrome.runtime.sendMessage({type: 'getVocabWord', word: vocWord}, (response) => {
-    renderVocabSnippet(response.results[0]);
+    renderVocabSnippet(response.result);
   });
 }
 
 
 function renderVocabSnippet(result) {
-  console.log("in render voc snippet");
+  let partOfSpeech = result.lexicalEntries[0].lexicalCategory.toUpperCase();
+  if (partOfSpeech === 'ADJECTIVE') {
+    partOfSpeech = 'ADJ.';
+  }
+  const posP = document.getElementById("voc-partofspeech");
+  posP.innerHTML = partOfSpeech;
 
   let word = result.id;
   const vocWordP = document.getElementById("voc-word");
   vocWordP.innerHTML = word;
 
-  let partOfSpeech = result.lexicalEntries[0].lexicalCategory.toUpperCase();
-  const posP = document.getElementById("voc-partofspeech");
-  posP.innerHTML = partOfSpeech;
-
+  let definition = result.lexicalEntries[0].entries[0].senses[0].definitions[0];
   // remove period at the end of definition
-  let definition = result.lexicalEntries[0].entries[0].senses[0].definitions[0].slice(0, -1);
+  if (definition[-1] === '.') { definition = definition.slice(0, -1); }
   const defP = document.getElementById("voc-def");
   defP.innerHTML = definition;
 }

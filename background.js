@@ -29,7 +29,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     case 'getVocabWord':
       // send ajax requestion to oxford dictionary for vocabSnippet
       $.ajax({
-        url: `https://od-api.oxforddictionaries.com/api/v1/entries/en/${request.word}`,
+        // url: `https://od-api.oxforddictionaries.com/api/v1/entries/en/${request.word}`,
+        url: `https://od-api.oxforddictionaries.com/api/v1/entries/en/esoteric`,
         method: 'GET',
         headers: {
           'app_id': '2b9cea8c',

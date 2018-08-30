@@ -1,0 +1,70 @@
+/* .flipper-container:hover, .brainteaser:hover {
+background: #c7cdd6;
+cursor: pointer;
+transform: scale(1.015);
+transition: all .2s ease-in-out;
+} */
+
+.flipper-container {
+  width: 100%;
+}
+
+.vocab {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front, .back {
+  display: flex;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+  /* display: none; */
+}
+
+.front-box, .back-box {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin: 10px;
+  padding: 12px;
+
+  border-radius: 3px;
+  box-sizing: border-box;
+
+  background: #e3e9f2;
+  color: black;
+}
+
+.vocab-title {
+  padding-right: 25px;
+  padding-bottom: 0;
+  border-right: 2px solid #474747;
+}
+
+#voc-partofspeech, #voc-def {
+  padding-left: 25px;
+}
+
+#voc-word {
+  padding-left: 15px;
+  font-weight: 400;
+}
+
+.flipper-container.hover .vocab {
+  transform: rotateY(180deg);
+}

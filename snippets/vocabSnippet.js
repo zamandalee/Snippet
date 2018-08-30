@@ -55,7 +55,7 @@ function renderVocabSnippet(result) {
 getVocabWord();
 
 // for click/flip functionality
-const vocabBox = document.getElementsByClassName("vocab")[0];
+const vocabBox = document.getElementsByClassName("flipper-container")[0];
 vocabBox.addEventListener('click', (event) => {
   console.log("clicked");
 

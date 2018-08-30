@@ -1,19 +1,29 @@
 /*eslint no-undef: 0*/
 
-const SELECTORS = ['history', 'science', 'misc'];
+historySnippet();
 
-const displaySelectedFact = () => {
-  chrome.storage.sync.get('preferences', (currentStore)=>{
-    const currentPreferences = currentStore.preferences;
-    SELECTORS.forEach((id)=>{
-      const div = document.getElementById(id);
-      if (currentPreferences.fact === id) {
-        div.classList.remove('hidden');
-      }
-    });
-  });
-};
+const hisTab = document.getElementById('his-tab');
+const sciTab = document.getElementById('sci-tab');
+const misTab = document.getElementById('mis-tab');
 
-// TODO button event that changes rendered tab
 
-displaySelectedFact();
+hisTab.addEventListener('click', ()=>{
+  hisTab.classList.add('selected-tab');
+  sciTab.classList.remove('selected-tab');
+  misTab.classList.remove('selected-tab');
+  historySnippet();
+});
+
+sciTab.addEventListener('click', ()=>{
+  sciTab.classList.add('selected-tab');
+  hisTab.classList.remove('selected-tab');
+  misTab.classList.remove('selected-tab');
+  scienceSnippet();
+});
+
+misTab.addEventListener('click', ()=>{
+  misTab.classList.add('selected-tab');
+  sciTab.classList.remove('selected-tab');
+  hisTab.classList.remove('selected-tab');
+  miscSnippet();
+});

@@ -62,7 +62,7 @@ const flipper = document.getElementsByClassName('flipper')[0];
 
 vocabBox.addEventListener('click', (event) => {
   console.log("clicked");
-  vocabBox.classList.toggle('hover');
+  vocabBox.classList.toggle('flip');
 
   front.classList.toggle('hide');
   back.classList.toggle('hide');

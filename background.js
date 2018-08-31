@@ -1,8 +1,10 @@
 /*eslint no-undef: 0*/
 
 const defaultPreferences = {
-  fact: 'history',
-  name: 'FirstName LastName'
+  fact: true,
+  vocab: true,
+
+  name: ''
 };
 
 chrome.runtime.onInstalled.addListener(function() {
@@ -17,15 +19,6 @@ chrome.runtime.onInstalled.addListener(function() {
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   switch( request.type ) {
-    case 'changeFact':
-      chrome.storage.sync.get('preferences', (currentStore) => {
-        const currentPreferences = currentStore.preferences;
-        currentPreferences.fact = request.factType;
-        chrome.storage.sync.set({preferences: currentPreferences});
-        chrome.tabs.reload();
-      });
-      break;
-
     case 'getVocabWord':
       // send ajax requestion to oxford dictionary for vocabSnippet
       $.ajax({

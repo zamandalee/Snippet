@@ -1,5 +1,5 @@
-function historySnippet() {
-  const hisP = document.getElementById("his-snippet");
+const historySnippet = () => {
+  const hisP = document.getElementById("fact-snippet");
 
   const historySnippets = [
     "The Ottoman Empire's Sultan Ibrahim I had 280 of his concubines drowned in the ocean after one of them slept with another man.",
@@ -40,7 +40,6 @@ function historySnippet() {
     "Seven of the ten deadliest wars in human history have been in China.",
     "The Taiping Rebellion in China (1850 to 1864) alone had twice as many deaths as World War 1.",
     "Between 1900 and 1920, Tug of War was an Olympic event.",
-    "During the middle ages, it was believed that sperm produced from the left testicle produced girls. To ensure having a son, men would have it removed.",
     "Thomas Jefferson and John Adams died hours apart on the same day, July 4, 1826, the 50th anniversary of American independence.",
     "During World War II, a Pennsylvania dentist convinced President Roosevelt to bomb Japan with timed explosives attached to thousands of bats. But after some of the armed bats were accidentally released and destroyed their testing facility, the bat bomb project was scrapped.",
     "The smallest Major League Baseball player of all time was 3foot 7inches Eddie Gaedel. He walked in his only plate appearance.",
@@ -60,6 +59,4 @@ function historySnippet() {
   ];
 
   hisP.innerHTML = historySnippets[ Math.floor( Math.random() * historySnippets.length ) ];
-}
-
-historySnippet();
+};

@@ -14,11 +14,9 @@ function getMISC(callback)
 }
 
 function miscSnippet() {
-  const miscP = document.getElementById("misc-snippet");
+  const miscP = document.getElementById("fact-snippet");
   getMISC((res)=>{
     const miscSnip = res.data.children[1].data.title;
     miscP.innerHTML = miscSnip;
   });
 }
-
-miscSnippet();

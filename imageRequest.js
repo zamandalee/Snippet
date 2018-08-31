@@ -8,15 +8,14 @@ function getImage(callback, width, height)
     };
     xmlHttp.open(
       "GET",
-      `https://source.unsplash.com/random/${width}x${height}?nature?dark?night`,
+      `https://source.unsplash.com/random/?nature`,
       true
     );
     xmlHttp.send(null);
 }
 
 function fetchImage(callback) {
-  const {height, width} = document.body.getBoundingClientRect();
   getImage((res) => {
     callback(res.responseURL);
-  }, width, height);
+  });
 }

@@ -71,6 +71,6 @@ vocabBox.addEventListener('click', (event) => {
 
   setTimeout(() => {
     flipper.classList.toggle('background');
-  }, 400);
+  }, 200);
 
 });

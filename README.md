@@ -33,6 +33,9 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 - [ ] Google Earth images/National Geographic/etc. API for background behind the snippet
 
 ## Bonus Features
+- Feature expansion
+   - [ ] Widgets: todo, links, weather
+   - [ ] News: dropdown to toggle NYT homepage news, national, business, tech, etc. specifics
 - User customizable
   - [ ] Allow users to see their Snippet history (1)
   - [ ] Favorite capabilities (3)

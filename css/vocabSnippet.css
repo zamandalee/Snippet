@@ -1,23 +1,14 @@
-.front:hover, .brainteaser:hover {
-  background: #c7cdd6;
-  cursor: pointer;
-  transform: scale(1.015);
-  transition: all .2s ease-in-out;
-}
-
-.back:hover {
-  background: #c7cdd6;
-  cursor: pointer;
-}
-
 .background {
   background: #e3e9f2;
 }
 
 .flipper-container {
-  perspective: 1000px;
-  position: relative;
+  /* position: relative; */
   z-index: 1;
+  height: 25%;
+
+  display: flex;
+  align-items: center;
 }
 
 .flipper-container.flip .flipper {
@@ -32,7 +23,6 @@
   transition: 0.8s;
   transform-style: preserve-3d;
   z-index: 2;
-  height: 100%;
   width: 100%;
 }
 
@@ -61,30 +51,25 @@
   z-index: 3;
 }
 
+.front:hover, .brainteaser:hover {
+  background: #c7cdd6;
+  cursor: pointer;
+  transform: scale(1.015);
+  transition: all .2s ease-in-out;
+}
+
+.back:hover {
+  background: #c7cdd6;
+  cursor: pointer;
+}
+
 .hide {
   display: none;
   color: #e3e9f2;
   transition: color 2s;
 }
 
-/* .front-box, .back-box {
-  height: 100%;
-  width: 100%;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  margin: 10px;
-  padding: 12px;
-
-  border-radius: 3px;
-  box-sizing: border-box;
-
-  background: #e3e9f2;
-  color: black;
-} */
-
+/* vocab snippet content */
 .vocab-title {
   padding-right: 25px;
   padding-bottom: 0;

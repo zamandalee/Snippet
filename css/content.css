@@ -32,27 +32,34 @@ h1 {
   flex-direction: row;
   justify-content: center;
   box-sizing: border-box;
-  height: 55%;
+  height: 65%;
 }
 
 .left-half {
   /* margin-right: 10px; */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   box-sizing: border-box;
   width: 67%;
-  height: 65%;
+  height: 100%;
 }
 
 .left-top {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
+  height: 75%;
+}
+
+.flipper-container {
+  /* see vocabSnippet.css */
 }
 
 .section {
   margin: 10px;
   padding: 12px;
+  /* height: 100%; */
 
   border-radius: 3px;
   box-sizing: border-box;

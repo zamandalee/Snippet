@@ -27,17 +27,11 @@ function getVocabWord() {
   });
 }
 
-
 function renderVocabSnippet(result) {
   let partOfSpeech = result.lexicalEntries[0].lexicalCategory.toLowerCase();
   if (partOfSpeech === 'adjective') {
     partOfSpeech = 'adj.';
   }
-  // else if (partOfSpeech === 'Noun') {
-  //   partOfSpeech = 'n.';
-  // } else if (partOfSpeech === 'Verb') {
-  //   partOfSpeech = "v.";
-  // }
   const posP = document.getElementById("voc-partofspeech");
   posP.innerHTML = partOfSpeech;
 
@@ -54,7 +48,7 @@ function renderVocabSnippet(result) {
 
 getVocabWord();
 
-// for click/flip functionality
+// for click&flip functionality
 const vocabBox = document.getElementsByClassName("flipper-container")[0];
 const front = document.getElementsByClassName("front")[0];
 const back = document.getElementsByClassName("back")[0];

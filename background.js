@@ -3,7 +3,8 @@
 const defaultPreferences = {
   fact: true,
   vocab: true,
-
+  news: true,
+  brain: true,
   name: ''
 };
 
@@ -12,10 +13,6 @@ chrome.runtime.onInstalled.addListener(function() {
     console.log('Default preferences syced.');
   });
 });
-
-// TODO Function checks if there are facts stored for today. If not, calls APIs
-// Same with image
-// chrome.runtime.onConnect.addListener()
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   switch( request.type ) {

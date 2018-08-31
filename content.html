@@ -17,7 +17,7 @@
     </div>
     <h1 id="currentTime"></h1>
 
-    <div class="">
+    <div class="prompt-greeting">
       <div class="hidden" id="prompt">
         <form id="prompt-form">
           <input id="prompt-input" type="text" placeholder="Insert name here" value=""/>
@@ -33,7 +33,6 @@
       <div class="left-half">
 
         <div class="left-top">
-          <!-- TODO Tabs that switch current fact  -->
           <div id="fact" class="section fact">
             <div class="tab-flex">
               <button class="fact-tab selected-tab" id="his-tab">HISTORY</button>
@@ -44,22 +43,6 @@
               <p id="fact-snippet"></p>
             </div>
           </div>
-
-
-          <!-- <div id="science" class="section fact hidden">
-            <h3>SCIENCE</h3>
-            <p id="sci-snippet"></p>
-          </div>
-
-          <div id="misc" class="section fact hidden">
-            <h3>MISC</h3>
-            <p id="misc-snippet"></p>
-          </div>
-
-          <div id="history" class="section fact hidden">
-            <h3>HISTORY</h3>
-            <p id="his-snippet"></p>
-          </div> -->
 
           <div class="section brainteaser">
             <h3>BRAINTEASER</h3>
@@ -144,6 +127,7 @@
     <script src="snippets/historySnippet.js" type="text/javascript"></script>
     <script src="snippets/scienceSnippet.js" type="text/javascript"></script>
     <script src="snippets/miscSnippet.js" type="text/javascript"></script>
+    <script src="persistenceHandler.js" type="text/javascript"></script>
     <script src="imageRequest.js" type="text/javascript"></script>
     <script src="greeting.js" type="text/javascript"></script>
     <script src="content.js" type="text/javascript"></script>

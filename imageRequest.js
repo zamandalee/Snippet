@@ -2,8 +2,9 @@ function getImage(callback, width, height)
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
-        if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
-            callback(xmlHttp);
+        if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+          callback(xmlHttp);
+        }
     };
     xmlHttp.open(
       "GET",
@@ -13,12 +14,9 @@ function getImage(callback, width, height)
     xmlHttp.send(null);
 }
 
-function fetchImage() {
-  const body = document.body;
-  const {height, width} = body.getBoundingClientRect();
-  getImage((res)=>{
-    body.style.backgroundImage = `url(${res.responseURL})`;
+function fetchImage(callback) {
+  const {height, width} = document.body.getBoundingClientRect();
+  getImage((res) => {
+    callback(res.responseURL);
   }, width, height);
 }
-
-fetchImage();

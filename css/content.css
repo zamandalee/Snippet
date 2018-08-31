@@ -150,6 +150,12 @@ p {
   font-size: 32px;
 }
 
+.prompt-greeting {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .fact-tab {
   color: black;
   padding: 6px .2vw;
@@ -175,3 +181,13 @@ p {
   border-top-right-radius: 0px;
   padding: 18px;
 }
+/*
+.X {
+  float: right;
+  color: darkred;
+  font-weight: 600;
+}
+
+.X:hover {
+  color: red;
+} */

@@ -13,10 +13,9 @@ function getMISC(callback)
     xmlHttp.send(null);
 }
 
-function miscSnippet() {
-  const miscP = document.getElementById("fact-snippet");
-  getMISC((res)=>{
+function miscSnippet(callback) {
+  getMISC((res) => {
     const miscSnip = res.data.children[1].data.title;
-    miscP.innerHTML = miscSnip;
+    callback(miscSnip);
   });
 }

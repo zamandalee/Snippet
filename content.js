@@ -1,29 +1,38 @@
 /*eslint no-undef: 0*/
+const date = new Date().toDateString();
+const factSnippet = document.getElementById('fact-snippet');
 
-historySnippet();
-
-const hisTab = document.getElementById('his-tab');
-const sciTab = document.getElementById('sci-tab');
-const misTab = document.getElementById('mis-tab');
-
-
-hisTab.addEventListener('click', ()=>{
-  hisTab.classList.add('selected-tab');
-  sciTab.classList.remove('selected-tab');
-  misTab.classList.remove('selected-tab');
-  historySnippet();
+chrome.storage.sync.get(date, (ret)=>{
+  if (!ret[date]) {
+    getDailySnippets();
+  } else {
+    const todayData = ret[date];
+    factSnippet.innerHTML = todayData['history'];
+    document.body.style.backgroundImage = `url(${todayData['imageURL']})`;
+  }
 });
 
-sciTab.addEventListener('click', ()=>{
-  sciTab.classList.add('selected-tab');
-  hisTab.classList.remove('selected-tab');
-  misTab.classList.remove('selected-tab');
-  scienceSnippet();
-});
+const hisTab = [document.getElementById('his-tab'), "history"];
+const sciTab = [document.getElementById('sci-tab'), "science"];
+const misTab = [document.getElementById('mis-tab'), "misc"];
+const tabs = [hisTab, sciTab, misTab];
 
-misTab.addEventListener('click', ()=>{
-  misTab.classList.add('selected-tab');
-  sciTab.classList.remove('selected-tab');
-  hisTab.classList.remove('selected-tab');
-  miscSnippet();
+const setFact = (type) => {
+  chrome.storage.sync.get(date, (ret)=>{
+    const todayData = ret[date];
+    factSnippet.innerHTML = todayData[type];
+  });
+};
+
+const selectTab = (tab, factName) => {
+  const selectedTab = document.getElementsByClassName('selected-tab')[0];
+  selectedTab.classList.remove('selected-tab');
+  tab.classList.add('selected-tab');
+  setFact(factName);
+};
+
+tabs.forEach((tabInfo)=>{
+  tabInfo[0].addEventListener('click', ()=>{
+    selectTab(tabInfo[0], tabInfo[1]);
+  });
 });

@@ -5,34 +5,57 @@ transform: scale(1.015);
 transition: all .2s ease-in-out;
 } */
 
+.background {
+  background: #e3e9f2;
+}
+
 .flipper-container {
+  perspective: 1000px;
+  position: relative;
+  z-index: 1;
   width: 100%;
 }
 
-.vocab {
+.flipper-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flipper-container, .front, .back {
+  position: relative;
+}
+
+.flipper {
   transition: 0.6s;
   transform-style: preserve-3d;
-  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
 }
 
 .front, .back {
   display: flex;
   backface-visibility: hidden;
-  top: 0;
-  left: 0;
+  background: #e3e9f2;
+  transition: color 2s;
 }
 
 .front {
-  z-index: 2;
-  transform: rotate3d(0, 1, 0, 0deg);
+  z-index: 3;
+  transform: rotateY(0deg);
 }
 
 .back {
-  transform: rotate3d(0, 1, 0, 180deg);
-  /* display: none; */
+  transform: rotateY(180deg);
+  z-index: 3;
 }
 
-.front-box, .back-box {
+.hide {
+  display: none;
+  color: #e3e9f2;
+  transition: color 2s;
+}
+
+/* .front-box, .back-box {
   height: 100%;
   width: 100%;
 
@@ -48,7 +71,7 @@ transition: all .2s ease-in-out;
 
   background: #e3e9f2;
   color: black;
-}
+} */
 
 .vocab-title {
   padding-right: 25px;
@@ -63,12 +86,4 @@ transition: all .2s ease-in-out;
 #voc-word {
   padding-left: 15px;
   font-weight: 400;
-}
-
-.flipper-container.hover .vocab {
-  transform: rotateY(180deg);
-}
-
-.show {
-  
 }

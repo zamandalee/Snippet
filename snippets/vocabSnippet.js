@@ -56,17 +56,21 @@ getVocabWord();
 
 // for click/flip functionality
 const vocabBox = document.getElementsByClassName("flipper-container")[0];
+const front = document.getElementsByClassName("front")[0];
+const back = document.getElementsByClassName("back")[0];
+const flipper = document.getElementsByClassName('flipper')[0];
+
 vocabBox.addEventListener('click', (event) => {
   console.log("clicked");
   vocabBox.classList.toggle('hover');
 
-  const front = document.getElementsByClassName("front")[0];
-  const back = document.getElementsByClassName("back")[0];
-  if (document.getElementsByClassName("flipper-container hover")[0]) {
-    front.style.display = "none";
-    back.style.display = "flex";
-  } else {
-    front.style.display = "flex";
-    back.style.display = "none";
-  }
+  front.classList.toggle('hide');
+  back.classList.toggle('hide');
+
+  flipper.classList.toggle('background');
+
+  setTimeout(() => {
+    flipper.classList.toggle('background');
+  }, 400);
+
 });

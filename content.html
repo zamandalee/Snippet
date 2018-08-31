@@ -13,35 +13,27 @@
   </head>
 
   <body>
-    <div id="grey-alpha">
-    </div>
-    <h1 id="currentTime"></h1>
 
-    <div class="prompt-greeting">
-      <div class="hidden" id="prompt">
-        <form id="prompt-form">
-          <input id="prompt-input" type="text" placeholder="Insert name here" value=""/>
-        </form>
-      </div>
-      <div class="hidden" id="greeting">
-        <h2 id="greeting-h2"></h2>
-      </div>
-    </div>
+    <h1 id="currentTime"></h1>
 
     <div class="snippets">
 
       <div class="left-half">
 
         <div class="left-top">
-          <div id="fact" class="section fact">
-            <div class="tab-flex">
-              <button class="fact-tab selected-tab" id="his-tab">HISTORY</button>
-              <button class="fact-tab" id="sci-tab">SCIENCE</button>
-              <button class="fact-tab" id="mis-tab">MISC.</button>
-            </div>
-            <div class="fact-div">
-              <p id="fact-snippet"></p>
-            </div>
+          <div id="science" class="section fact hidden">
+            <h3>SCIENCE</h3>
+            <p id="sci-snippet"></p>
+          </div>
+
+          <div id="misc" class="section fact hidden">
+            <h3>MISC</h3>
+            <p id="misc-snippet"></p>
+          </div>
+
+          <div id="history" class="section fact hidden">
+            <h3>HISTORY</h3>
+            <p id="his-snippet"></p>
           </div>
 
           <div class="section brainteaser">
@@ -53,24 +45,18 @@
         </div>
 
 
-        <div class="flipper-container">
-          <div class="vocab">
-            <!-- <div class="flipper"> -->
+        <div class="flipper-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
             <div class="front">
-              <div class="front-box">
-                <h3 class="vocab-title">VOCAB</h3>
-                <p id="voc-partofspeech"></p>
-                <p id="voc-word"></p>
-              </div>
+              <h3 class="vocab-title">VOCAB</h3>
+              <p id="voc-partofspeech"></p>
+              <p id="voc-word"></p>
               <!-- <p class="click-me">(click me!)</p> -->
             </div>
-            <div class="back">
-              <div class="back-box">
-                <h3 class="vocab-title">VOCAB</h3>
-                <p id="voc-def"></p>
-              </div>
+            <div class="back hide">
+              <h3 class="vocab-title">VOCAB</h3>
+              <p id="voc-def"></p>
             </div>
-            <!-- </div> -->
           </div>
         </div>
 
@@ -123,13 +109,13 @@
       </div>
 
     </div>
+
+
     <script src="time.js" type="text/javascript"></script>
     <script src="snippets/historySnippet.js" type="text/javascript"></script>
     <script src="snippets/scienceSnippet.js" type="text/javascript"></script>
     <script src="snippets/miscSnippet.js" type="text/javascript"></script>
-    <script src="persistenceHandler.js" type="text/javascript"></script>
     <script src="imageRequest.js" type="text/javascript"></script>
-    <script src="greeting.js" type="text/javascript"></script>
     <script src="content.js" type="text/javascript"></script>
 
     <!-- using jQuery in news ajax request -> google stores jQuery to use -->

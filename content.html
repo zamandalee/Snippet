@@ -16,24 +16,35 @@
 
     <h1 id="currentTime"></h1>
 
+    <div id="grey-alpha"></div>
+    <h1 id="currentTime"></h1>
+
+    <div class="prompt-greeting">
+      <div class="hidden" id="prompt">
+        <h1 class="prompt-h1">Hello, enter your name</h1>
+        <form id="prompt-form">
+          <input id="prompt-input" type="text" value=""/>
+        </form>
+      </div>
+      <div class="hidden" id="greeting">
+        <h2 id="greeting-h2"></h2>
+      </div>
+    </div>
+
     <div class="snippets">
 
       <div class="left-half">
 
         <div class="left-top">
-          <div id="science" class="section fact hidden">
-            <h3>SCIENCE</h3>
-            <p id="sci-snippet"></p>
-          </div>
-
-          <div id="misc" class="section fact hidden">
-            <h3>MISC</h3>
-            <p id="misc-snippet"></p>
-          </div>
-
-          <div id="history" class="section fact hidden">
-            <h3>HISTORY</h3>
-            <p id="his-snippet"></p>
+          <div id="fact" class="section fact">
+            <div class="tab-flex">
+              <button class="fact-tab selected-tab" id="his-tab">HISTORY</button>
+              <button class="fact-tab" id="sci-tab">SCIENCE</button>
+              <button class="fact-tab" id="mis-tab">MISC.</button>
+            </div>
+            <div class="fact-div">
+              <p id="fact-snippet"></p>
+            </div>
           </div>
 
           <div class="section brainteaser">
@@ -122,5 +133,6 @@
     <script src="jquery-3.3.1.min.js"></script>
     <script src="snippets/newsSnippet.js" type="text/javascript"></script>
     <script src="snippets/vocabSnippet.js" type="text/javascript"></script>
+    <script src="greeting.js" type="text/javascript"></script>
   </body>
 </html>

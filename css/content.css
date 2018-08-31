@@ -15,15 +15,16 @@ body {
   box-sizing: border-box;
   background-size: 100% 100%;
   font-family: 'Lato', sans-serif;
+  padding-bottom: 200px;
 }
 
 h1 {
-  margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
   font-size: 130px;
   font-weight: bold;
   text-align: center;
   color: white;
+  padding-bottom: 20px;
 }
 
 .snippets {
@@ -172,13 +173,14 @@ p {
 
 #greeting-h2 {
   color: #fff;
-  font-size: 50px;
+  font-size: 46px;
+  padding-bottom: 20px;
 }
 
 .prompt-greeting {
   width: 100%;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .fact-tab {

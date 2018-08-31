@@ -7,16 +7,16 @@ url += '?' + $.param({
 
 $.ajax({
   url: url,
-  method: 'GET',
+  method: 'GET'
 }).done( result => {
   result = result.results;
-  fiveHomeNews(result);
+  renderHomeNews(result);
 }).fail( err => {
   throw err;
 });
 
 
-function fiveHomeNews(result) {
+function renderHomeNews(result) {
   let counter = 0;
   let idx = 0;
 
@@ -59,6 +59,7 @@ function selectArticle(num) {
   interval = setInterval(carousel, 4000);
 }
 
+// auto carousel of articles and selection
 function carousel() {
   const articles = document.getElementsByClassName("news-article");
   const dots = document.getElementsByClassName("dot");

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/newsSnippet.css">
+    <link rel="stylesheet" href="css/vocabSnippet.css">
 
     <title>New Tab</title>
   </head>
@@ -62,13 +63,32 @@
 
           <div class="section brainteaser">
             <h3>BRAINTEASER</h3>
+            <p id="riddle-q"></p>
+            <p id="riddle-a"></p>
+            <a id="riddle-src" href="">source</a>
           </div>
         </div>
 
 
-        <div class="section vocab">
-          <h3>VOCAB</h3>
-          <p id="voc-snippet"></p>
+        <div class="flipper-container">
+          <div class="vocab">
+            <!-- <div class="flipper"> -->
+            <div class="front">
+              <div class="front-box">
+                <h3 class="vocab-title">VOCAB</h3>
+                <p id="voc-partofspeech"></p>
+                <p id="voc-word"></p>
+              </div>
+              <!-- <p class="click-me">(click me!)</p> -->
+            </div>
+            <div class="back">
+              <div class="back-box">
+                <h3 class="vocab-title">VOCAB</h3>
+                <p id="voc-def"></p>
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
         </div>
 
       </div>
@@ -123,7 +143,6 @@
     <script src="time.js" type="text/javascript"></script>
     <script src="snippets/historySnippet.js" type="text/javascript"></script>
     <script src="snippets/scienceSnippet.js" type="text/javascript"></script>
-    <script src="snippets/vocabSnippet.js" type="text/javascript"></script>
     <script src="snippets/miscSnippet.js" type="text/javascript"></script>
     <script src="imageRequest.js" type="text/javascript"></script>
     <script src="greeting.js" type="text/javascript"></script>
@@ -132,5 +151,6 @@
     <!-- using jQuery in news ajax request -> google stores jQuery to use -->
     <script src="jquery-3.3.1.min.js"></script>
     <script src="snippets/newsSnippet.js" type="text/javascript"></script>
+    <script src="snippets/vocabSnippet.js" type="text/javascript"></script>
   </body>
 </html>

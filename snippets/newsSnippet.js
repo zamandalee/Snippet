@@ -48,7 +48,7 @@ window.addEventListener('load', (event) => {
   }
 });
 
-let slideIndex = 0;
+let slideIndex = 2;
 carousel();
 let interval = setInterval(carousel, 4000);
 

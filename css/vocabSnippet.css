@@ -24,11 +24,11 @@ transition: all .2s ease-in-out;
 
 .front {
   z-index: 2;
-  transform: rotateY(0deg);
+  transform: rotate3d(0, 1, 0, 0deg);
 }
 
 .back {
-  transform: rotateY(180deg);
+  transform: rotate3d(0, 1, 0, 180deg);
   /* display: none; */
 }
 
@@ -67,4 +67,8 @@ transition: all .2s ease-in-out;
 
 .flipper-container.hover .vocab {
   transform: rotateY(180deg);
+}
+
+.show {
+  
 }

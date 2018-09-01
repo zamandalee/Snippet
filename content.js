@@ -11,11 +11,10 @@ chrome.storage.sync.get([date, 'todos'], (ret)=>{
     displayRiddleSnippet(todayData['riddle']);
     factSnippet.innerHTML = todayData['history'];
     renderVocabSnippet(todayData['vocab']);
-    const todos = ret['todos'];
+    const todos = Object.keys(ret['todos']);
+    console.log(todos);
     todos.forEach((todoString)=>{
-      const newTodoLi = document.createElement('li');
-      newTodoLi.innerHTML = `<button>${todoString}</button>`;
-      todoUl.appendChild(newTodoLi);
+      createTodoLi(todoString);
     });
   }
 });

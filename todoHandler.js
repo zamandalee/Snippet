@@ -14,17 +14,32 @@ todoOpener.addEventListener('click', () => {
   }
 });
 
+const createTodoLi = (text) => {
+  const newTodoLi = document.createElement('li');
+  const newButton = document.createElement('button');
+  newButton.innerHTML = text;
+  newTodoLi.appendChild(newButton);
+  todoUl.appendChild(newTodoLi);
+  newButton.addEventListener('click', () => {
+    chrome.storage.sync.get('todos', (ret) => {
+      const currentTodos = ret['todos'];
+      currentTodos[text] = true;
+      chrome.storage.sync.set({todos: currentTodos});
+    });
+  });
+  // TODO hook button to strikeout
+  // TODO make trash can
+};
+
 todoForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const newTodo = todoInput.value;
-  const newTodoLi = document.createElement('li');
-  newTodoLi.innerHTML = `<button>${newTodo}</button>`;
-  todoUl.appendChild(newTodoLi);
+  const text = todoInput.value;
+  createTodoLi(text);
 
   todoForm.reset();
   chrome.storage.sync.get('todos', (ret) => {
     const currentTodos = ret['todos'];
-    currentTodos.push(newTodo);
+    currentTodos[text] = false;
     chrome.storage.sync.set({todos: currentTodos});
   });
 });

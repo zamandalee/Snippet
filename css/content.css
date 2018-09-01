@@ -201,3 +201,7 @@ p {
   border-top-right-radius: 0px;
   padding: 20px;
 }
+
+#fact-snippet, #riddle-q, #riddle-a, #voc-def {
+  line-height: 1.5;
+}

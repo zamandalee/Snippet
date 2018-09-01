@@ -223,7 +223,7 @@ p {
   background-color: grey;
 }
 
-.todo-ul > li {
+#todo-ul > li {
   display: flex;
   flex-direction: row;
   align-items: center;

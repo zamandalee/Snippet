@@ -75,3 +75,17 @@
 }
 
 /* riddle snippet content */
+.riddle-flipper p, .riddle-flipper a {
+  padding: 6px;
+}
+
+.riddle-flipper a {
+  color: #103e89;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+.riddle-flipper a:hover {
+  color: #3169c4;
+}

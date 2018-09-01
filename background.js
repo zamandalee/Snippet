@@ -5,11 +5,11 @@ const defaultPreferences = {
   vocab: true,
   news: true,
   brain: true,
-  name: ''
+  name: '',
 };
 
 chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({preferences: defaultPreferences}, function() {
+  chrome.storage.sync.set({preferences: defaultPreferences, todos: {}}, function() {
     console.log('Default preferences syced.');
   });
 });

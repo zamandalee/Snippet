@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/newsSnippet.css">
     <link rel="stylesheet" href="css/vocabSnippet.css">
+    <link rel="stylesheet" href="css/riddleSnippet.css">
 
     <title>New Tab</title>
   </head>
@@ -47,24 +48,40 @@
             </div>
           </div>
 
-          <div class="section brainteaser">
+          <!-- <div class="section brainteaser">
             <h3>BRAINTEASER</h3>
             <p id="riddle-q"></p>
             <p id="riddle-a"></p>
             <a id="riddle-src" href="">source</a>
+          </div> -->
+
+          <div class="riddle-flipper-container">
+            <div class="riddle-flipper">
+              <div class="riddle-front">
+                <h3>BRAINTEASER</h3>
+                <p id="riddle-q"></p>
+                <!-- <p class="click-me">(click me to flip!)</p> -->
+              </div>
+              <div class="riddle-back hide">
+                <h3>BRAINTEASER</h3>
+                <p id="riddle-a"></p>
+                <a id="riddle-src" href="">source</a>
+              </div>
+            </div>
           </div>
+
         </div>
 
 
-        <div class="flipper-container">
-          <div class="flipper">
-            <div class="front">
+        <div class="vocab-flipper-container">
+          <div class="vocab-flipper">
+            <div class="vocab-front">
               <h3 class="vocab-title">VOCAB</h3>
               <p id="voc-partofspeech"></p>
               <p id="voc-word"></p>
               <!-- <p class="click-me">(click me to flip!)</p> -->
             </div>
-            <div class="back hide">
+            <div class="vocab-back hide">
               <h3 class="vocab-title">VOCAB</h3>
               <p id="voc-def"></p>
             </div>
@@ -136,13 +153,14 @@
     <script src="snippets/scienceSnippet.js" type="text/javascript"></script>
     <script src="snippets/miscSnippet.js" type="text/javascript"></script>
     <script src="imageRequest.js" type="text/javascript"></script>
-    <script src="persistenceHandler.js" type="text/javascript"></script>
 
     <!-- using jQuery in news ajax request -> google stores jQuery to use -->
     <script src="jquery-3.3.1.min.js"></script>
     <script src="snippets/newsSnippet.js" type="text/javascript"></script>
     <script src="snippets/vocabSnippet.js" type="text/javascript"></script>
     <script src="greeting.js" type="text/javascript"></script>
+    <script src="persistenceHandler.js" type="text/javascript"></script>
+    <script src="snippets/riddleSnippet.js" type="text/javascript"></script>
     <script src="content.js" type="text/javascript"></script>
   </body>
 </html>

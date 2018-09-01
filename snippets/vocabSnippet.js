@@ -1,25 +1,24 @@
-const vocabSnippets = ['abeyance', 'abnegate', 'acrimonious', 'acumen',
-'accrete', 'adroit', 'adumbrate', 'alacrity', 'antipathy', 'arcane',
-'aspersion', 'avarice', 'bellicose', 'bereft', 'bombastic', 'bourgeois',
-'bowdlerize', 'buttress', 'cajole', 'capacious', 'carouse', 'castigate',
-'circuitous', 'circumvent', 'clement', 'clout', 'commodious', 'concord',
-'congruous', 'convivial', 'corroborate', 'delineate', 'diffident',
-'dilatory', 'egregious', 'ephemeral', 'esoteric', 'ethereal',
-'evanescent', 'fastidious', 'fatuous', 'foment', 'hackneyed',
-'ignominious', 'impasse', 'incongruous', 'indolent', 'inertia',
-'insipid', 'inundate', 'jocular', 'lackadaisical', 'mercurial',
-'mitigate', 'nascent', 'nebulous', 'neophyte', 'noetic', 'nugatory',
-'obdurate', 'obsequious', 'oracular', 'orthogonal', 'ostensible',
-'palliative', 'paragon', 'paramour', 'perturbation', 'pithy',
-'polemic', 'presage', 'prevaricator', 'propitious', 'protean',
-'provisory', 'quixotic', 'quotidian', 'rancorous', 'recidivism',
-'reprobate', 'ribald', 'rife', 'sophomoric', 'splendiferous', 'staid',
-'sublimity', 'surfeit', 'sycophant', 'truculent', 'turgid', 'umbrage',
-'unctuous', 'variegated', 'venal', 'veracity', 'verdant', 'vituperate',
-'vivify', 'waif', 'wallydraigle', 'winsome', 'xenophobia', 'yahoo',
-'zany', 'zenith', 'zephyr'];
-
 function getVocabWord(callback) {
+  const vocabSnippets = ['abeyance', 'abject', 'abnegate', 'abstruse', 'acarpous', 'acrimonious', 'acumen',
+    'accrete', 'adroit', 'adumbrate', 'alacrity', 'antipathy', 'arcane',
+    'aspersion', 'assiduity', 'avarice', 'bellicose', 'bereft', 'bombastic', 'bourgeois',
+    'bowdlerize', 'buttress', 'capacious', 'carouse', 'castigate',
+    'circuitous', 'circumvent', 'clement', 'clout', 'cogitate', 'commodious', 'concord',
+    'congruous', 'convivial', 'corroborate', 'delineate', 'diffident',
+    'dilatory', 'egregious', 'ephemeral', 'esoteric', 'ethereal',
+    'evanescent', 'fastidious', 'fatuous', 'foment', 'hackneyed',
+    'ignominious', 'impasse', 'incongruous', 'indolent', 'inertia',
+    'insipid', 'inundate', 'jocular', 'lackadaisical', 'mercurial',
+    'mitigate', 'nascent', 'nebulous', 'neophyte', 'noetic', 'nugatory',
+    'obdurate', 'obsequious', 'oracular', 'orthogonal', 'ostensible',
+    'palliative', 'paragon', 'paramour', 'perturbation',
+    'polemic', 'presage', 'prevaricator', 'propitious', 'protean',
+    'provisory', 'quixotic', 'quotidian', 'rancorous', 'recidivism',
+    'reprobate', 'rife', 'sophomoric', 'splendiferous', 'staid',
+    'sublimity', 'surfeit', 'sycophant', 'truculent', 'turgid', 'umbrage',
+    'unctuous', 'variegated', 'venal', 'veracity', 'verdant', 'vituperate',
+    'vivify', 'waif', 'wallydraigle', 'winsome', 'xenophobia', 'yahoo',
+    'zany', 'zenith', 'zephyr'];
 
   const vocWord = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
 
@@ -28,6 +27,8 @@ function getVocabWord(callback) {
     callback(response.result);
   });
 }
+
+
 
 function renderVocabSnippet(result) {
   let partOfSpeech = result.lexicalEntries[0].lexicalCategory.toLowerCase();
@@ -49,21 +50,21 @@ function renderVocabSnippet(result) {
 }
 
 // for click&flip functionality
-const vocabBox = document.getElementsByClassName("flipper-container")[0];
-const front = document.getElementsByClassName("front")[0];
-const back = document.getElementsByClassName("back")[0];
-const flipper = document.getElementsByClassName('flipper')[0];
+const vocabBox = document.getElementsByClassName("vocab-flipper-container")[0];
+const vocabFront = document.getElementsByClassName("vocab-front")[0];
+const vocabBack = document.getElementsByClassName("vocab-back")[0];
+const vocabFlipper = document.getElementsByClassName('vocab-flipper')[0];
 
 vocabBox.addEventListener('click', (event) => {
   vocabBox.classList.toggle('flip');
 
-  front.classList.toggle('hide');
-  back.classList.toggle('hide');
+  vocabFront.classList.toggle('hide');
+  vocabBack.classList.toggle('hide');
 
-  flipper.classList.toggle('background');
+  vocabFlipper.classList.toggle('background');
 
   setTimeout(() => {
-    flipper.classList.toggle('background');
+    vocabFlipper.classList.toggle('background');
   }, 200);
 
 });

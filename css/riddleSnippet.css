@@ -44,6 +44,10 @@
 .riddle-front {
   transform: rotateY(0deg);
   z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .riddle-back {
@@ -72,6 +76,7 @@
 /* riddle snippet content */
 .riddle-flipper p, .riddle-flipper a {
   padding: 6px;
+  width: fit-content;
 }
 
 .riddle-flipper a {
@@ -83,4 +88,10 @@
 
 .riddle-flipper a:hover {
   color: #3169c4;
+}
+
+#riddle-q, #riddle-a {
+  overflow: scroll;
+  /* height: 100%; */
+  /* border-bottom: 1px solid #d0d5dd; */
 }

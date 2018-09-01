@@ -24,6 +24,7 @@
   transform-style: preserve-3d;
   z-index: 2;
   width: 100%;
+  border-radius: 3px;
 }
 
 .vocab-front, .vocab-back, .hide {

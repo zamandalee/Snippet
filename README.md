@@ -98,7 +98,6 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 
 ## Day 4: Brainteasers, Customized Message
 - Amanda
-  - [X] Use riddle API for new functionality
   - [X] Connect display to API calls
 - Dustin
   - [X] Finish customized message
@@ -106,7 +105,7 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 
 ## Day 5: History, Favorites
 - Amanda
-  - [ ] Add favorited functionality
+- [X] Use riddle API for new functionality
 - Dustin
   - [ ] Initial settings page
 
@@ -114,6 +113,7 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 - Both
   - [ ] Finish initial settings/favorites work
 - Amanda
+  - [ ] Add favorited functionality
   - [ ] Weather widget
 - Dustin
   - [ ] Todo widget

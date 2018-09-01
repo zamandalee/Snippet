@@ -1,8 +1,8 @@
 /*eslint no-undef: 0*/
-const date = new Date().toDateString();
+const date = new Date().toDateString(); // day, not time
 const factSnippet = document.getElementById('fact-snippet');
 
-chrome.storage.sync.get(date, (ret)=>{
+chrome.storage.sync.get(date, (ret) => {
   if (!ret[date]) {
     getDailySnippets();
   } else {

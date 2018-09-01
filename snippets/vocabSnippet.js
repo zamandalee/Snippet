@@ -23,7 +23,7 @@ function getVocabWord(callback) {
   const vocWord = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
 
   chrome.runtime.sendMessage({type: 'getVocabWord', word: vocWord}, (response) => {
-    renderVocabSnippet(response.result);
+    renderVocabSnippet(response.result); // first render of the day
     callback(response.result);
   });
 }

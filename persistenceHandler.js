@@ -14,12 +14,12 @@ const todayDate = new Date().toDateString();
 
 const getDailySnippets = () => {
   const todayData = {};
-  todayData['history'] = historySnippet();
-  todayData['science'] = scienceSnippet();
+  todayData['history'] = {content: historySnippet()};
+  todayData['science'] = {content: scienceSnippet()};
   // TODO brainteasers
 
   factSnippet.innerHTML = todayData['history'];
-  getVocabWord((result)=>{
+  getVocabWord((result) => {
     todayData['vocab'] = result;
     fetchImage((imageURL) => {
       todayData['imageURL'] = imageURL;

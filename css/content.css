@@ -251,3 +251,17 @@ p {
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
+
+/* favoriting */
+#heart {
+  color: gray;
+}
+
+#heart:hover {
+  cursor: pointer;
+  color: #d87f7f;
+}
+
+.favorited {
+  color: #bc0000 !important;
+}

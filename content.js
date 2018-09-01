@@ -2,7 +2,7 @@
 const date = new Date().toDateString();
 const factSnippet = document.getElementById('fact-snippet');
 
-chrome.storage.sync.get(date, (ret)=>{
+chrome.storage.sync.get([date, 'todos'], (ret)=>{
   if (!ret[date]) {
     getDailySnippets();
   } else {
@@ -11,6 +11,12 @@ chrome.storage.sync.get(date, (ret)=>{
     displayRiddleSnippet(todayData['riddle']);
     factSnippet.innerHTML = todayData['history'];
     renderVocabSnippet(todayData['vocab']);
+    const todos = ret['todos'];
+    todos.forEach((todoString)=>{
+      const newTodoLi = document.createElement('li');
+      newTodoLi.innerHTML = `<button>${todoString}</button>`;
+      todoUl.appendChild(newTodoLi);
+    });
   }
 });
 

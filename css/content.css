@@ -212,23 +212,19 @@ p {
   background-color: #e3e9f2;
 }
 
-.todo-display > ul > li > button {
-  background-color: #000;
-  height: 17px;
-  width: 17px;
-  margin-right: 5px;
-  border-radius: 5px;
-}
-
-.todo-display > ul > li > button:hover {
-  background-color: grey;
-}
-
 #todo-ul > li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 80%;
+  width: 100%;
+}
+
+#todo-ul > li > button {
+  width: 100%;
+}
+
+#todo-ul > li > button:hover {
+  background-color: lightgrey;
 }
 
 #todo-toggle-button {
@@ -243,4 +239,14 @@ p {
 
 #fact-snippet, #riddle-q, #riddle-a, #voc-def {
   line-height: 1.5;
+}
+
+.translate-right {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.translate-left {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
 }

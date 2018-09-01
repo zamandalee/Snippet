@@ -26,25 +26,23 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 # Functionality and Minimum Viable Product
 
 ## Core Features
-- [ ] Categories and data for the following categories: science, history, vocabulary, fun fact/miscellaneous (from Reddit TIL), top 5 NYT trending news stories (will be dynamically updating)
+- [X] Categories and data for the following categories: science, history, vocabulary, fun fact/miscellaneous (from Reddit TIL), top 5 NYT trending news stories (will be dynamically updating)
 - [ ] Have the user customize the categories of Snippets they would like on their homepage
-- [ ] Snippets are updated daily
+- [X] Snippets are updated daily
 - [ ] Ensure same content each day for a computer
-- [ ] Google Earth images/National Geographic/etc. API for background behind the snippet
+- [X] Google Earth images/National Geographic/etc. API for background behind the snippet
 
 ## Bonus Features
 - Feature expansion
-   - [ ] Widgets: todo, links, weather
-   - [ ] News: dropdown to toggle NYT homepage news, national, business, tech, etc. specifics
+   - [ ] Widgets: todo, weather (4: Dustin Amanda)
+   - [ ] News: dropdown to toggle NYT homepage news, national, business, tech, etc. specifics (5: Dustin or Amanda)
 - User customizable
-  - [ ] Allow users to see their Snippet history (1)
-  - [ ] Favorite capabilities (3)
-  - [ ] Custom styling for their homepage (5)
+  - [ ] Allow users to see their Snippet history (1: Dustin)
+  - [ ] Favorite capabilities (3: Amanda)
+  - [ ] Custom styling for their homepage
 - [ ] Styling
-  - [ ] Before-loaded gray boxes (like on LinkedIn) (4)
-  - [ ] Flippable vocab and brainteaser (2)
-- [ ] Use external database (6)
-  - [ ] Allow for users to submit snippets: form to send a link (ex.: a Wikipedia link) that will be curated if it fits a category
+  - [ ] Before-loaded gray boxes (like on LinkedIn)
+  - [X] Flippable vocab and brainteaser (2: Amanda)
 
 # Technologies and Technical Challenges
 - JavaScript
@@ -90,38 +88,39 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 ## Day 3: Vocab, Photos
 - Amanda
   - [X] Finish News API with carousel transitioning
-  - [ ] Vocab API
-  - [ ] More history seed data
+  - [X] Vocab API
+  - [X] More history seed data
 - Dustin
-  - [ ] Add "Good morning/good afternoon/good evening, [customized name]!" message
-  - [ ] More science seed data
+  - [X] Add "Good morning/good afternoon/good evening, [customized name]!" message
+  - [X] More science seed data
 - Both
-  - [ ] Connect display to API calls
+  - [X] Connect display to API calls
 
 ## Day 4: Brainteasers, Customized Message
 - Amanda
-  - [ ] Use riddle API for new functionality
-  - [ ] Connect display to API calls
+  - [X] Connect display to API calls
 - Dustin
-  - [ ] Finish customized message, initial settings page
+  - [X] Finish customized message
+  - [X] Create local database with Google Chrome Storage to store old Snippets
 
 ## Day 5: History, Favorites
 - Amanda
-  - [ ] Add favorited functionality
+- [X] Use riddle API for new functionality
 - Dustin
-  - [ ] Create local database with Google Chrome Storage to store old Snippets
+  - [ ] Initial settings page
 
 ## Day 6 (weekend): Day 5 cont., Widgets
 - Both
-  - [ ] Finish history/favorites work
+  - [ ] Finish initial settings/favorites work
 - Amanda
+  - [ ] Add favorited functionality
   - [ ] Weather widget
 - Dustin
-  - [ ] Links, todo widgets
+  - [ ] Todo widget
 
 ## Day 7 (weekend): Polish
 - [ ] Both: polish seed data, and code
-- [ ] Amanda: finalize design layout, design logo
+- [ ] Amanda: finalize and optimize design layout, design logo
 - [ ] Dustin: push to Chrome store, production README
 
 # Marketing

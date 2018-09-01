@@ -1,6 +1,7 @@
 /*eslint no-undef: 0*/
 const date = new Date().toDateString(); // day, not time
 const factSnippet = document.getElementById('fact-snippet');
+// const hearts = document
 
 chrome.storage.sync.get([date, 'todos'], (ret) => {
   if (!ret[date]) {
@@ -9,9 +10,12 @@ chrome.storage.sync.get([date, 'todos'], (ret) => {
     const todayData = ret[date];
 
     document.body.style.backgroundImage = `url(${todayData['imageURL'].content})`;
+
     displayRiddleSnippet(todayData['riddle'].content);
     factSnippet.innerHTML = todayData['history'].content;
     renderVocabSnippet(todayData['vocab'].content);
+
+
 
     const todos = Object.keys(ret['todos']);
     console.log(todos);

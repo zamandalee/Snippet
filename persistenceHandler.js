@@ -29,7 +29,7 @@ const getDailySnippets = () => {
 
       miscSnippet((miscValue) => {
         todayData['misc'] = {content: miscValue, favorited: false};
-        chrome.storage.sync.set({ [todayDate]: todayData});
+        chrome.storage.sync.set({ [todayDate]: todayData });
       });
     });
   });

@@ -253,11 +253,11 @@ p {
 }
 
 /* favoriting */
-#heart {
+.heart {
   color: gray;
 }
 
-#heart:hover {
+.heart:hover {
   cursor: pointer;
   color: #d87f7f;
 }

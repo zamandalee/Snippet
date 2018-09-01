@@ -216,3 +216,42 @@ p {
   border-top-right-radius: 0px;
   padding: 18px;
 }
+
+.todo-display {
+  color: black;
+  position: absolute;
+  top: 33px;
+  left: 0;
+  font-size: 22px;
+  padding: 3px 10px;
+  background-color: #e3e9f2;
+}
+
+.todo-display > ul > li > button {
+  background-color: #000;
+  height: 17px;
+  width: 17px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.todo-display > ul > li > button:hover {
+  background-color: grey;
+}
+
+.todo-ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 80%;
+}
+
+#todo-toggle-button {
+  font-size: 20px;
+  padding: 3px 10px;
+  background-color: #e3e9f2;
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

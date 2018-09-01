@@ -14,9 +14,9 @@ const todayDate = new Date().toDateString();
 
 const getDailySnippets = () => {
   const todayData = {};
-  todayData['history'] = {content: historySnippet()};
-  todayData['science'] = {content: scienceSnippet()};
-  // TODO brainteasers
+  todayData['history'] = historySnippet();
+  todayData['science'] = scienceSnippet();
+  todayData['riddle'] = riddleSnippet();
 
   factSnippet.innerHTML = todayData['history'];
   getVocabWord((result) => {

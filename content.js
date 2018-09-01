@@ -2,14 +2,20 @@
 const date = new Date().toDateString(); // day, not time
 const factSnippet = document.getElementById('fact-snippet');
 
-chrome.storage.sync.get(date, (ret) => {
+chrome.storage.sync.get([date, 'todos'], (ret)=>{
   if (!ret[date]) {
     getDailySnippets();
   } else {
     const todayData = ret[date];
+    document.body.style.backgroundImage = `url(${todayData['imageURL']})`;
+    displayRiddleSnippet(todayData['riddle']);
     factSnippet.innerHTML = todayData['history'];
     renderVocabSnippet(todayData['vocab']);
-    document.body.style.backgroundImage = `url(${todayData['imageURL']})`;
+    const todos = Object.keys(ret['todos']);
+    console.log(todos);
+    todos.forEach((todoString)=>{
+      createTodoLi(todoString);
+    });
   }
 });
 

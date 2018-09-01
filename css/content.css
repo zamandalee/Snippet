@@ -136,14 +136,15 @@ p {
 }
 
 .prompt-h1 {
-  font-size: 50px;
+  font-size: 45px;
 }
 
 #prompt-input {
   color: #fff;
-  font-size: 32px;
+  font-size: 40px;
   border-bottom: 2px solid #fff;
   width: 600px;
+  margin-bottom: 5px;
 }
 
 #prompt-input::placeholder {
@@ -202,6 +203,51 @@ p {
   padding: 20px;
 }
 
+.todo-display {
+  color: black;
+  position: absolute;
+  top: 33px;
+  left: 0;
+  font-size: 22px;
+  padding: 3px 10px;
+  background-color: #e3e9f2;
+}
+
+#todo-ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+#todo-ul > li > button {
+  width: 100%;
+}
+
+#todo-ul > li > button:hover {
+  background-color: lightgrey;
+}
+
+#todo-toggle-button {
+  font-size: 20px;
+  padding: 3px 10px;
+  background-color: #e3e9f2;
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 #fact-snippet, #riddle-q, #riddle-a, #voc-def {
   line-height: 1.5;
+}
+
+.translate-right {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.translate-left {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
 }

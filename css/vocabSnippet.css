@@ -15,10 +15,6 @@
   transform: rotateY(180deg);
 }
 
-/* .vocab-flipper-container, .vocab-front, .vocab-back {
-  position: relative;
-} */
-
 .vocab-flipper {
   transition: 0.8s;
   transform-style: preserve-3d;
@@ -71,6 +67,16 @@
 }
 
 /* vocab snippet content */
+.voc-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pos-word {
+  display: flex;
+}
+
 .vocab-title {
   padding-right: 25px;
   padding-bottom: 0;

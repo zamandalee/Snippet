@@ -50,14 +50,23 @@
           <div class="riddle-flipper-container">
             <div class="riddle-flipper">
               <div class="riddle-front">
-                <h3>BRAINTEASER</h3>
-                <p id="riddle-q"></p>
-                <!-- <p class="click-me">(click me to flip!)</p> -->
+                <div>
+                  <h3>BRAINTEASER</h3>
+                  <p id="riddle-q"></p>
+                </div>
+                <div class="riddle-footer">
+                  <p class="riddle-arrow">solution &rarr;</p>
+                </div>
               </div>
               <div class="riddle-back hide">
-                <h3>BRAINTEASER</h3>
-                <p id="riddle-a"></p>
-                <a id="riddle-src" href="">source</a>
+                <div>
+                  <h3>BRAINTEASER</h3>
+                  <p id="riddle-a"></p>
+                  <a id="riddle-src" href="">source</a>
+                </div>
+                <div class="riddle-footer">
+                  <p class="riddle-arrow">back to riddle &rarr;</p>
+                </div>
               </div>
             </div>
           </div>
@@ -69,13 +78,22 @@
           <div class="vocab-flipper">
             <div class="vocab-front">
               <h3 class="vocab-title">VOCAB</h3>
-              <p id="voc-partofspeech"></p>
-              <p id="voc-word"></p>
-              <!-- <p class="click-me">(click me to flip!)</p> -->
+              <div class="voc-content">
+                <div class="pos-word">
+                  <p id="voc-partofspeech"></p>
+                  <p id="voc-word"></p>
+                </div>
+                <p class="voc-arrow">definition &rarr;</p>
+              </div>
             </div>
             <div class="vocab-back hide">
               <h3 class="vocab-title">VOCAB</h3>
-              <p id="voc-def"></p>
+              <div class="voc-content">
+                <div class="pos-word">
+                  <p id="voc-def"></p>
+                </div>
+                <p class="voc-arrow">back to word &rarr;</p>
+              </div>
             </div>
           </div>
         </div>

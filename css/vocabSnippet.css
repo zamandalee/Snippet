@@ -39,7 +39,6 @@
 }
 
 .vocab-front {
-  width: 96%;
   transform: rotateY(0deg);
   z-index: 3;
 }

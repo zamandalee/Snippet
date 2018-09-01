@@ -53,6 +53,10 @@
 .riddle-back {
   transform: rotateY(180deg);
   z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .riddle-front:hover {
@@ -94,4 +98,8 @@
   overflow: scroll;
   /* height: 100%; */
   /* border-bottom: 1px solid #d0d5dd; */
+}
+
+.riddle-arrow {
+  float: right;
 }

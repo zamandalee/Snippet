@@ -7,9 +7,10 @@ chrome.storage.sync.get(date, (ret)=>{
     getDailySnippets();
   } else {
     const todayData = ret[date];
+    document.body.style.backgroundImage = `url(${todayData['imageURL']})`;
+    displayRiddleSnippet(todayData['riddle']);
     factSnippet.innerHTML = todayData['history'];
     renderVocabSnippet(todayData['vocab']);
-    document.body.style.backgroundImage = `url(${todayData['imageURL']})`;
   }
 });
 

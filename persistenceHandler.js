@@ -16,7 +16,7 @@ const getDailySnippets = () => {
   const todayData = {};
   todayData['history'] = historySnippet();
   todayData['science'] = scienceSnippet();
-  // TODO brainteasers
+  todayData['riddle'] = riddleSnippet();
 
   factSnippet.innerHTML = todayData['history'];
   getVocabWord((result)=>{

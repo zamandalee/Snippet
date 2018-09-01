@@ -1,6 +1,6 @@
 .news {
   width: 33%;
-  height: 400px;
+  height: 94%;
   display: flex;
   flex-direction: column;
 }
@@ -13,7 +13,7 @@
   font-family: 'PT Serif', serif;
   height: 100%;
   overflow: scroll;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #d0d5dd;
 }
 
 .news-article > div {
@@ -39,7 +39,7 @@
 
 .multimedia {
   width: 70%;
-  padding-top: 10px;
+  padding-top: 18px;
   box-sizing: border-box;
   display: inline;
 }
@@ -50,6 +50,7 @@
 }
 
 .abstract {
+  padding-top: 10px;
   font-size: 15px;
   display: block;
 }

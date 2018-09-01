@@ -8,16 +8,16 @@
 
   display: flex;
   align-items: center;
-  height: 25%;
+  height: 15%;
 }
 
 .vocab-flipper-container.flip .vocab-flipper {
   transform: rotateY(180deg);
 }
 
-.vocab-flipper-container, .vocab-front, .vocab-back {
+/* .vocab-flipper-container, .vocab-front, .vocab-back {
   position: relative;
-}
+} */
 
 .vocab-flipper {
   transition: 0.8s;

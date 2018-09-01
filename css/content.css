@@ -11,7 +11,7 @@ body {
 
   height: 100vh;
   width: 100vw;
-  padding: 20px 100px;
+  padding: 50px 100px;
   box-sizing: border-box;
   background-size: 100% 100%;
   font-family: 'Lato', sans-serif;
@@ -92,22 +92,6 @@ p {
 .brainteaser {
   width: 50%;
   box-sizing: border-box;
-}
-
-.vocab {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.vocab h3 {
-  padding-right: 8px;
-  padding-bottom: 0;
-  border-right: 2px solid black;
-}
-
-.vocab p {
-  padding-left: 8px;
 }
 
 .section {
@@ -213,5 +197,5 @@ p {
   border-radius: 3px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  padding: 18px;
+  padding: 20px;
 }

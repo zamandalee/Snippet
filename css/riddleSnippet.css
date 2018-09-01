@@ -2,31 +2,33 @@
   background: #e3e9f2;
 }
 
-.vocab-flipper-container {
-  margin: 10px 0;
+.riddle-flipper-container {
+  /* position: relative; */
   z-index: 1;
 
   display: flex;
   align-items: center;
-  height: 25%;
+  height: 100%;
+  width: 50%;
 }
 
-.vocab-flipper-container.flip .vocab-flipper {
+.riddle-flipper-container.flip .riddle-flipper {
   transform: rotateY(180deg);
 }
 
-.vocab-flipper-container, .vocab-front, .vocab-back {
+.riddle-flipper-container, .riddle-front, .riddle-back {
   position: relative;
 }
 
-.vocab-flipper {
+.riddle-flipper {
   transition: 0.8s;
   transform-style: preserve-3d;
   z-index: 2;
+  height: 100%;
   width: 100%;
 }
 
-.vocab-front, .vocab-back, .hide {
+.riddle-front, .riddle-back, .hide {
   margin: 10px;
   padding: 12px;
   box-sizing: border-box;
@@ -34,31 +36,33 @@
   border-radius: 3px;
 }
 
-.vocab-front, .vocab-back {
+.riddle-front, .riddle-back {
   display: flex;
+  flex-direction: column;
+  height: 100%;
   backface-visibility: hidden;
   background: #e3e9f2;
   transition: color 2s;
 }
 
-.vocab-front {
+.riddle-front {
   transform: rotateY(0deg);
   z-index: 3;
 }
 
-.vocab-back {
+.riddle-back {
   transform: rotateY(180deg);
   z-index: 3;
 }
 
-.vocab-front:hover {
+.riddle-front:hover {
   background: #d0d5dd;
   cursor: pointer;
   transform: scale(1.015);
   transition: all .2s ease-in-out;
 }
 
-.vocab-back:hover {
+.riddle-back:hover {
   background: #d0d5dd;
   cursor: pointer;
 }
@@ -69,18 +73,4 @@
   transition: color 2s;
 }
 
-/* vocab snippet content */
-.vocab-title {
-  padding-right: 25px;
-  padding-bottom: 0;
-  border-right: 2px solid #474747;
-}
-
-#voc-partofspeech, #voc-def {
-  padding-left: 25px;
-}
-
-#voc-word {
-  padding-left: 15px;
-  font-weight: 400;
-}
+/* riddle snippet content */

@@ -1,4 +1,3 @@
-
 function riddleSnippet() {
   const riddleQ = document.getElementById("riddle-q");
   const riddleA = document.getElementById("riddle-a");
@@ -225,6 +224,29 @@ function riddleSnippet() {
 
    let riddle = riddleSnippets[Math.floor( Math.random() * riddleSnippets.length )];
 
+   riddleQ.innerHTML = riddle.riddle;
+   riddleA.innerHTML = riddle.answer;
+   riddleSrc.href = riddle.url;
 }
 
 riddleSnippet();
+
+const riddleBox = document.getElementsByClassName("riddle-flipper-container")[0];
+const riddleFront = document.getElementsByClassName("riddle-front")[0];
+const riddleBack = document.getElementsByClassName("riddle-back")[0];
+const riddleFlipper = document.getElementsByClassName('riddle-flipper')[0];
+
+riddleBox.addEventListener('click', (event) => {
+  console.log("clicked");
+  riddleBox.classList.toggle('flip');
+
+  riddleFront.classList.toggle('hide');
+  riddleBack.classList.toggle('hide');
+
+  riddleFlipper.classList.toggle('background');
+
+  setTimeout(() => {
+    riddleFlipper.classList.toggle('background');
+  }, 200);
+
+});

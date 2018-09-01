@@ -57,7 +57,7 @@ h1 {
 }
 
 .section {
-  margin: 10px;
+  margin: 0px 0px 10px 10px;
   padding: 12px;
   /* height: 100%; */
 
@@ -209,6 +209,7 @@ p {
 }
 
 .fact-div {
+  height: 90%;
   background: #e3e9f2;
   border-radius: 3px;
   border-top-left-radius: 0px;

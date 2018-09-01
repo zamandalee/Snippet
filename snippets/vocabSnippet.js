@@ -1,29 +1,31 @@
-function getVocabWord() {
-  const vocabSnippets = ['abeyance', 'abnegate', 'acrimonious', 'acumen',
-    'accrete', 'adroit', 'adumbrate', 'alacrity', 'antipathy', 'arcane',
-    'aspersion', 'avarice', 'bellicose', 'bereft', 'bombastic', 'bourgeois',
-    'bowdlerize', 'buttress', 'cajole', 'capacious', 'carouse', 'castigate',
-    'circuitous', 'circumvent', 'clement', 'clout', 'commodious', 'concord',
-    'congruous', 'convivial', 'corroborate', 'delineate', 'diffident',
-    'dilatory', 'egregious', 'ephemeral', 'esoteric', 'ethereal',
-    'evanescent', 'fastidious', 'fatuous', 'foment', 'hackneyed',
-    'ignominious', 'impasse', 'incongruous', 'indolent', 'inertia',
-    'insipid', 'inundate', 'jocular', 'lackadaisical', 'mercurial',
-    'mitigate', 'nascent', 'nebulous', 'neophyte', 'noetic', 'nugatory',
-    'obdurate', 'obsequious', 'oracular', 'orthogonal', 'ostensible',
-    'palliative', 'paragon', 'paramour', 'perturbation', 'pithy',
-    'polemic', 'presage', 'prevaricator', 'propitious', 'protean',
-    'provisory', 'quixotic', 'quotidian', 'rancorous', 'recidivism',
-    'reprobate', 'ribald', 'rife', 'sophomoric', 'splendiferous', 'staid',
-    'sublimity', 'surfeit', 'sycophant', 'truculent', 'turgid', 'umbrage',
-    'unctuous', 'variegated', 'venal', 'veracity', 'verdant', 'vituperate',
-    'vivify', 'waif', 'wallydraigle', 'winsome', 'xenophobia', 'yahoo',
-    'zany', 'zenith', 'zephyr'];
+const vocabSnippets = ['abeyance', 'abnegate', 'acrimonious', 'acumen',
+'accrete', 'adroit', 'adumbrate', 'alacrity', 'antipathy', 'arcane',
+'aspersion', 'avarice', 'bellicose', 'bereft', 'bombastic', 'bourgeois',
+'bowdlerize', 'buttress', 'cajole', 'capacious', 'carouse', 'castigate',
+'circuitous', 'circumvent', 'clement', 'clout', 'commodious', 'concord',
+'congruous', 'convivial', 'corroborate', 'delineate', 'diffident',
+'dilatory', 'egregious', 'ephemeral', 'esoteric', 'ethereal',
+'evanescent', 'fastidious', 'fatuous', 'foment', 'hackneyed',
+'ignominious', 'impasse', 'incongruous', 'indolent', 'inertia',
+'insipid', 'inundate', 'jocular', 'lackadaisical', 'mercurial',
+'mitigate', 'nascent', 'nebulous', 'neophyte', 'noetic', 'nugatory',
+'obdurate', 'obsequious', 'oracular', 'orthogonal', 'ostensible',
+'palliative', 'paragon', 'paramour', 'perturbation', 'pithy',
+'polemic', 'presage', 'prevaricator', 'propitious', 'protean',
+'provisory', 'quixotic', 'quotidian', 'rancorous', 'recidivism',
+'reprobate', 'ribald', 'rife', 'sophomoric', 'splendiferous', 'staid',
+'sublimity', 'surfeit', 'sycophant', 'truculent', 'turgid', 'umbrage',
+'unctuous', 'variegated', 'venal', 'veracity', 'verdant', 'vituperate',
+'vivify', 'waif', 'wallydraigle', 'winsome', 'xenophobia', 'yahoo',
+'zany', 'zenith', 'zephyr'];
+
+function getVocabWord(callback) {
 
   const vocWord = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
 
   chrome.runtime.sendMessage({type: 'getVocabWord', word: vocWord}, (response) => {
     renderVocabSnippet(response.result);
+    callback(response.result);
   });
 }
 
@@ -46,8 +48,6 @@ function renderVocabSnippet(result) {
   defP.innerHTML = definition;
 }
 
-getVocabWord();
-
 // for click&flip functionality
 const vocabBox = document.getElementsByClassName("flipper-container")[0];
 const front = document.getElementsByClassName("front")[0];
@@ -55,7 +55,6 @@ const back = document.getElementsByClassName("back")[0];
 const flipper = document.getElementsByClassName('flipper')[0];
 
 vocabBox.addEventListener('click', (event) => {
-  console.log("clicked");
   vocabBox.classList.toggle('flip');
 
   front.classList.toggle('hide');

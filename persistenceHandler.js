@@ -16,15 +16,18 @@ const getDailySnippets = () => {
   const todayData = {};
   todayData['history'] = historySnippet();
   todayData['science'] = scienceSnippet();
-  // TODO add vocab + brainteasers
+  // TODO brainteasers
 
   factSnippet.innerHTML = todayData['history'];
-  fetchImage((imageURL) => {
-    todayData['imageURL'] = imageURL;
-    document.body.style.backgroundImage = `url(${imageURL})`;
-    miscSnippet((miscValue) => {
-      todayData['misc'] = miscValue;
-      chrome.storage.sync.set({ [todayDate]: todayData});
+  getVocabWord((result)=>{
+    todayData['vocab'] = result;
+    fetchImage((imageURL) => {
+      todayData['imageURL'] = imageURL;
+      document.body.style.backgroundImage = `url(${imageURL})`;
+      miscSnippet((miscValue) => {
+        todayData['misc'] = miscValue;
+        chrome.storage.sync.set({ [todayDate]: todayData});
+      });
     });
   });
 };

@@ -8,6 +8,7 @@ chrome.storage.sync.get(date, (ret)=>{
   } else {
     const todayData = ret[date];
     factSnippet.innerHTML = todayData['history'];
+    renderVocabSnippet(todayData['vocab']);
     document.body.style.backgroundImage = `url(${todayData['imageURL']})`;
   }
 });

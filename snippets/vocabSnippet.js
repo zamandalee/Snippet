@@ -1,4 +1,4 @@
-function getVocabWord() {
+function getVocabWord(callback) {
   const vocabSnippets = ['abeyance', 'abject', 'abnegate', 'abstruse', 'acarpous', 'acrimonious', 'acumen',
     'accrete', 'adroit', 'adumbrate', 'alacrity', 'antipathy', 'arcane',
     'aspersion', 'assiduity', 'avarice', 'bellicose', 'bereft', 'bombastic', 'bourgeois',
@@ -24,8 +24,11 @@ function getVocabWord() {
 
   chrome.runtime.sendMessage({type: 'getVocabWord', word: vocWord}, (response) => {
     renderVocabSnippet(response.result);
+    callback(response.result);
   });
 }
+
+
 
 function renderVocabSnippet(result) {
   let partOfSpeech = result.lexicalEntries[0].lexicalCategory.toLowerCase();
@@ -46,8 +49,6 @@ function renderVocabSnippet(result) {
   defP.innerHTML = definition;
 }
 
-getVocabWord();
-
 // for click&flip functionality
 const vocabBox = document.getElementsByClassName("vocab-flipper-container")[0];
 const vocabFront = document.getElementsByClassName("vocab-front")[0];
@@ -55,7 +56,6 @@ const vocabBack = document.getElementsByClassName("vocab-back")[0];
 const vocabFlipper = document.getElementsByClassName('vocab-flipper')[0];
 
 vocabBox.addEventListener('click', (event) => {
-  console.log("clicked");
   vocabBox.classList.toggle('flip');
 
   vocabFront.classList.toggle('hide');

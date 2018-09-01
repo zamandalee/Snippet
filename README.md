@@ -105,22 +105,22 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 
 ## Day 5: History, Favorites
 - Amanda
-- [X] Use riddle API for new functionality
+  - [X] Use riddle API for new functionality
 - Dustin
-  - [ ] Initial settings page
+  - [X] Start todos widget, add persistence to existing Snippets
 
 ## Day 6 (weekend): Day 5 cont., Widgets
 - Both
-  - [ ] Finish initial settings/favorites work
+  - [ ] Start history/favorites work
 - Amanda
-  - [ ] Add favorited functionality
   - [ ] Weather widget
 - Dustin
   - [ ] Todo widget
 
 ## Day 7 (weekend): Polish
-- [ ] Both: polish seed data, and code
-- [ ] Amanda: finalize and optimize design layout, design logo
+- [ ] Either: application.css
+- [ ] Both: finish history/favorites, finish widgets
+- [ ] Amanda: finalize and optimize design layout, design logo, demo page
 - [ ] Dustin: push to Chrome store, production README
 
 # Marketing

@@ -12,10 +12,11 @@ body {
   height: 100vh;
   width: 100vw;
   padding: 50px 100px;
+  padding-bottom: 100px;
   box-sizing: border-box;
   background-size: 100% 100%;
+
   font-family: 'Lato', sans-serif;
-  padding-bottom: 200px;
 }
 
 h1 {
@@ -32,7 +33,7 @@ h1 {
   flex-direction: row;
   justify-content: center;
   box-sizing: border-box;
-  height: 65%;
+  height: 70%;
 }
 
 .left-half {
@@ -49,7 +50,7 @@ h1 {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  height: 75%;
+  height: 85%;
 }
 
 .flipper-container {

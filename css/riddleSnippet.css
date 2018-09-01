@@ -3,21 +3,18 @@
 }
 
 .riddle-flipper-container {
-  /* position: relative; */
+  margin: 10px;
   z-index: 1;
 
   display: flex;
   align-items: center;
-  height: 100%;
   width: 50%;
+  height: 94%;
 }
 
 .riddle-flipper-container.flip .riddle-flipper {
   transform: rotateY(180deg);
-}
-
-.riddle-flipper-container, .riddle-front, .riddle-back {
-  position: relative;
+  height: 100%;
 }
 
 .riddle-flipper {
@@ -30,10 +27,8 @@
 }
 
 .riddle-front, .riddle-back, .hide {
-  margin: 10px;
   padding: 12px;
   box-sizing: border-box;
-
   border-radius: 3px;
 }
 

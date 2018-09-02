@@ -153,14 +153,8 @@
       </div>
 
     </div>
-    <div class="translate-left todo-display">
-      <ul id="todo-ul">
-      </ul>
-      <form id="todo-form">
-        <input id="todo-input" placeholder="New todo"/>
-      </form>
-    </div>
 
+    <button class="widget" id="favorites">History &hearts;</button>
     <div class="black-modal hidden">
       <div id="inner-history-modal">
         <div class="tab-flex">
@@ -169,15 +163,24 @@
           <button class="modal-tab">VOCAB</button>
           <button class="modal-tab">FAVORITES</button>
         </div>
-        <div id="modal-section">
 
+        <div id="modal-section">
+          <ul id="history-list">
+          </ul>
         </div>
       </div>
+
       <button id="black-modal-x">&#9587;</button>
     </div>
 
     <button class="widget" id="todo-toggle-button">Todo &#9998;</button>
-    <button class="widget" id="favorites">History &hearts;</button>
+    <div class="translate-left todo-display">
+      <ul id="todo-ul">
+      </ul>
+      <form id="todo-form">
+        <input id="todo-input" placeholder="New todo"/>
+      </form>
+    </div>
 
     <script src="time.js" type="text/javascript"></script>
     <script src="snippets/historySnippet.js" type="text/javascript"></script>
@@ -195,5 +198,6 @@
     <script src="snippets/riddleSnippet.js" type="text/javascript"></script>
     <script src="content.js" type="text/javascript"></script>
     <script src="favorites.js" type="text/javascript"></script>
+    <script src="history.js" type="text/javascript"></script>
   </body>
 </html>

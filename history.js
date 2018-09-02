@@ -1,5 +1,21 @@
 /*eslint no-undef: 0*/
 
+// open history/favorites modal
+const favoriteButton = document.getElementById('favorites');
+const modal = document.getElementsByClassName('black-modal')[0];
+const modalX = document.getElementById('black-modal-x');
+
+
+favoriteButton.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    renderContent('fact');
+});
+
+modalX.addEventListener('click', () => {
+  modal.classList.add('hidden');
+});
+
+// get content from chrome storage
 function getContent(category) {
   let categoryContent = [];
 
@@ -12,15 +28,15 @@ function getContent(category) {
 
         switch( category ) {
           case 'fact':
-            categoryContent.push(todayData['history']);
-            categoryContent.push(todayData['science']);
-            categoryContent.push(todayData['misc']);
+            categoryContent.push(['history', todayData['history']]);
+            categoryContent.push(['science', todayData['science']]);
+            categoryContent.push(['misc', todayData['misc']]);
             break;
           case 'riddle':
-            categoryContent.push(todayData['riddle']);
+            categoryContent.push(['riddle', todayData['riddle']]);
             break;
           case 'vocab':
-            categoryContent.push(todayData['vocab']);
+            categoryContent.push(['vocab', todayData['vocab']]);
             break;
           case 'favorites':
             const favorites = getFavorites(todayData);
@@ -40,7 +56,7 @@ function getFavorites(todayData) {
   // to iterate through todayData obj
   for (let category in todayData) {
     if (todayData[category].favorited) {
-      favorites.push(todayData[category]);
+      favorites.push([category, todayData[category]]);
     }
   }
 
@@ -50,15 +66,39 @@ function getFavorites(todayData) {
 function renderContent(category) {
   const content = getContent(category);
 
+  const historyList = document.getElementById('history-list');
+
+  // render each item in history list
+  content.forEach( categoryPair => {
+    const newHistoryItem = document.createElement('li');
+    const itemContent = document.createElement('p');
+
+    // handle favorite button coloring
+    const favoriteButton = document.createElement('button');
+    favoriteButton.classList.add('heart');
+    if (categoryPair[1].favorited) {
+      favoriteButton.classList.add('favorited');
+    }
+
+    // add the innerHTML depending on category
+    itemContent.innerHTML = getItemContent(categoryPair[0], categoryPair[1].content);
+
+    newHistoryItem.appendChild(favoriteButton);
+    newHistoryItem.appendChild(itemContent);
+    historyList.appendChild(newHistoryItem);
+
+  });
+}
+
+function getItemContent(category, content) {
   switch (category) {
-    case 'fact':
-
-      break;
+    case 'science':
+    case 'history':
+    case 'misc':
+      return content;
     case 'riddle':
-      break;
+      return content.riddle;
     case 'vocab':
-      break;
-    case 'favorites':
+      return content.id;
   }
-
 }

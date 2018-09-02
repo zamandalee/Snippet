@@ -113,6 +113,16 @@ p {
   padding: 0;
 }
 
+.fact-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#fact-snippet, #riddle-q, #riddle-a, #voc-def {
+  line-height: 1.5;
+}
+
 .tab-flex {
   width: 100%;
   display: flex;
@@ -135,6 +145,7 @@ p {
   z-index: -1;
 }
 
+/* greeting and prompt */
 .prompt-h1 {
   font-size: 45px;
 }
@@ -176,6 +187,7 @@ p {
   margin-bottom: 20px;
 }
 
+/* fact snippet tabs */
 .fact-tab {
   color: black;
   padding: 6px .2vw;
@@ -202,6 +214,8 @@ p {
   border-top-right-radius: 0px;
   padding: 20px;
 }
+
+/* todos */
 
 .todo-display {
   color: black;
@@ -238,10 +252,6 @@ p {
   left: 0;
 }
 
-#fact-snippet, #riddle-q, #riddle-a, #voc-def {
-  line-height: 1.5;
-}
-
 .translate-right {
   transform: translateX(0);
   transition: transform 0.3s ease-in-out;
@@ -255,6 +265,8 @@ p {
 /* favoriting */
 .heart {
   color: gray;
+  padding: none;
+  width: fit-content;
 }
 
 .heart:hover {

@@ -79,7 +79,6 @@
 
 /* riddle snippet content */
 .riddle-flipper p, .riddle-flipper a {
-  padding: 6px;
   width: fit-content;
 }
 
@@ -94,10 +93,21 @@
   color: #3169c4;
 }
 
+#riddle-q, #riddle-a, #riddle-src {
+  padding: 8px;
+}
+
 #riddle-q, #riddle-a {
   overflow: scroll;
   /* height: 100%; */
   /* border-bottom: 1px solid #d0d5dd; */
+}
+
+.riddle-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
 }
 
 .riddle-arrow {

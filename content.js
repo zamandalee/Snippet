@@ -1,7 +1,7 @@
 /*eslint no-undef: 0*/
 const date = new Date().toDateString(); // day, not time
 const factSnippet = document.getElementById('fact-snippet');
-// const hearts = document
+const hearts = document.getElementsByClassName('heart');
 
 chrome.storage.sync.get([date, 'todos'], (ret) => {
   if (!ret[date]) {
@@ -15,10 +15,16 @@ chrome.storage.sync.get([date, 'todos'], (ret) => {
     factSnippet.innerHTML = todayData['history'].content;
     renderVocabSnippet(todayData['vocab'].content);
 
-
+    Array.from(hearts).forEach( heart => {
+      console.log(heart);
+      console.log(todayData[heart.dataset.type]);
+      if (todayData[heart.dataset.type].favorited) {
+        console.log("in condition");
+        heart.classList.add('favorited');
+      }
+    });
 
     const todos = Object.keys(ret['todos']);
-    console.log(todos);
     todos.forEach((todoString) => {
       createTodoLi(todoString);
     });

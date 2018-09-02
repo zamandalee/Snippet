@@ -295,7 +295,23 @@ p {
 #favorites {
   bottom: 0;
   right: 0;
+}
+
 #til {
-  color: grey;
-  float: right;
+  color: #103e89;
+  text-decoration: underline;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.til-footer {
+  padding-top: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-border {
+  border-top: 1px solid #d0d5dd;
 }

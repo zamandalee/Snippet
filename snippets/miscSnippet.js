@@ -15,7 +15,7 @@ function getMISC(callback)
 
 function miscSnippet(callback) {
   getMISC((res) => {
-    const miscSnip = res.data.children[1].data.title;
-    callback(miscSnip);
+    const post = res.data.children[1].data;
+    callback(post.title, post.permalink);
   });
 }

@@ -221,8 +221,8 @@ function displayRiddleSnippet(riddle) {
   const riddleQ = document.getElementById("riddle-q");
   const riddleA = document.getElementById("riddle-a");
   const riddleSrc = document.getElementById("riddle-src");
-  riddleQ.innerHTML = riddle.riddle;
-  riddleA.innerHTML = riddle.answer;
+  riddleQ.innerHTML = `Q: ${riddle.riddle}`;
+  riddleA.innerHTML = `A: ${riddle.answer}`;
   riddleSrc.href = riddle.url;
 }
 

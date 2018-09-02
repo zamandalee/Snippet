@@ -1,0 +1,55 @@
+.black-modal {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+}
+
+#inner-history-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%,-50%,0);
+  background-color: rgba(0,0,0,0);
+}
+
+#modal-tabs {
+  background-color: #e3e9f2;
+}
+
+#modal-section {
+  width: 600px;
+  height: 600px;
+  background-color: #e3e9f2;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.modal-tab {
+  color: black;
+  padding: 8px .5vw;
+  width: 24.5%;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 8px 8px 0px 0;
+  background-color: #c7cdd6;
+}
+
+.modal-tab:hover {
+  background-color: #e3e9f2;
+}
+
+.selected-tab {
+  background-color: #e3e9f2;
+}
+
+#black-modal-x {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: white;
+  font-size: 32px;
+}

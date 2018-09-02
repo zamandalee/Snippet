@@ -110,6 +110,6 @@
   padding: 8px;
 }
 
-.riddle-arrow {
-  float: right;
+.riddle-back .riddle-footer {
+  justify-content: flex-end;
 }

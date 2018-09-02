@@ -213,6 +213,19 @@ p {
   padding: 20px;
 }
 
+#fact-snippet {
+  height: 100%;
+  overflow: scroll;
+}
+
+/* WIDGET */
+.widget {
+  font-size: 20px;
+  padding: 10px;
+  color: #FFF;
+  position: absolute;
+}
+
 /* todos */
 
 .todo-display {
@@ -241,11 +254,6 @@ p {
 }
 
 #todo-toggle-button {
-  font-size: 20px;
-  padding: 3px 10px;
-  background-color: #e3e9f2;
-  color: black;
-  position: absolute;
   top: 0;
   left: 0;
 }
@@ -277,11 +285,6 @@ p {
 }
 
 #favorites {
-  position: absolute;
   bottom: 0;
   right: 0;
-  padding: 10px;
-  color: #FFF;
-  font-size: 20px;
-  font-weight: 300;
 }

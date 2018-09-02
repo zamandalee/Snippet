@@ -8,7 +8,11 @@
 
   display: flex;
   align-items: center;
-  height: 15%;
+
+  box-sizing: border-box;
+  height: 25%;
+  min-height: 25%;
+  height: fit-content;
 }
 
 .vocab-flipper-container.flip .vocab-flipper {
@@ -71,6 +75,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .pos-word {
@@ -78,16 +83,43 @@
 }
 
 .vocab-title {
+  margin: auto;
   padding-right: 25px;
   padding-bottom: 0;
+  height: 100%;
   border-right: 2px solid #474747;
+}
+
+.vocab-back .vocab-title {
+  border: none;
 }
 
 #voc-partofspeech, #voc-def {
   padding-left: 25px;
 }
 
+#voc-def {
+  border-left: 2px solid #474747;
+}
+
 #voc-word {
   padding-left: 15px;
   font-weight: 400;
+}
+
+.heart-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.voc-arrow {
+  padding-left: 20px;
+}
+
+.heart-arrow .voc-arrow {
+  padding-left: 32px;
+}
+
+.vocab-back .voc-arrow {
+  width: 22%;
 }

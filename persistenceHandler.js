@@ -14,20 +14,23 @@ const todayDate = new Date().toDateString();
 
 const getDailySnippets = () => {
   const todayData = {};
-  todayData['history'] = historySnippet();
-  todayData['science'] = scienceSnippet();
-  todayData['riddle'] = riddleSnippet();
+  todayData['history'] = {content: historySnippet(), favorited: false};
+  todayData['science'] = {content: scienceSnippet(), favorited: false};
+  todayData['riddle'] = {content: riddleSnippet(), favorited: false};
 
-  factSnippet.innerHTML = todayData['history'];
-  getVocabWord((result)=>{
-    todayData['vocab'] = result;
+  factSnippet.innerHTML = todayData['history'].content;
+
+  getVocabWord((result) => {
+    todayData['vocab'] = {content: result, favorited: false};
+
     fetchImage((imageURL) => {
-      todayData['imageURL'] = imageURL;
+      todayData['imageURL'] = {content: imageURL, favorited: false};
       document.body.style.backgroundImage = `url(${imageURL})`;
+
       miscSnippet((miscValue, miscUrl) => {
-        todayData['misc'] = miscValue;
-        // TODO store miscUrl for later display
-        chrome.storage.sync.set({ [todayDate]: todayData});
+        // TODO: display miscUrl
+        todayData['misc'] = {content: miscValue, favorited: false};
+        chrome.storage.sync.set({ [todayDate]: todayData });
       });
     });
   });

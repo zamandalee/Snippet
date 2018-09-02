@@ -23,7 +23,7 @@ function getVocabWord(callback) {
   const vocWord = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
 
   chrome.runtime.sendMessage({type: 'getVocabWord', word: vocWord}, (response) => {
-    renderVocabSnippet(response.result);
+    renderVocabSnippet(response.result); // first render of the day
     callback(response.result);
   });
 }
@@ -44,7 +44,7 @@ function renderVocabSnippet(result) {
 
   let definition = result.lexicalEntries[0].entries[0].senses[0].definitions[0];
   // remove period at the end of definition
-  if (definition[-1] === '.') { definition = definition.slice(0, -1); }
+  if (definition[definition.length - 1] === '.') { definition = definition.slice(0, -1); }
   const defP = document.getElementById("voc-def");
   defP.innerHTML = definition;
 }

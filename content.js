@@ -1,16 +1,29 @@
 /*eslint no-undef: 0*/
-const date = new Date().toDateString();
+const date = new Date().toDateString(); // day, not time
 const factSnippet = document.getElementById('fact-snippet');
+const hearts = document.getElementsByClassName('heart');
 
-chrome.storage.sync.get([date, 'todos'], (ret)=>{
+chrome.storage.sync.get([date, 'todos'], (ret) => {
   if (!ret[date]) {
     getDailySnippets();
   } else {
     const todayData = ret[date];
-    document.body.style.backgroundImage = `url(${todayData['imageURL']})`;
-    displayRiddleSnippet(todayData['riddle']);
-    factSnippet.innerHTML = todayData['history'];
-    renderVocabSnippet(todayData['vocab']);
+
+    document.body.style.backgroundImage = `url(${todayData['imageURL'].content})`;
+
+    displayRiddleSnippet(todayData['riddle'].content);
+    factSnippet.innerHTML = todayData['history'].content;
+    renderVocabSnippet(todayData['vocab'].content);
+
+    Array.from(hearts).forEach( heart => {
+      console.log(heart);
+      console.log(todayData[heart.dataset.type]);
+      if (todayData[heart.dataset.type].favorited) {
+        console.log("in condition");
+        heart.classList.add('favorited');
+      }
+    });
+
     const todos = Object.keys(ret['todos']);
     todos.forEach((todoString)=>{
       createTodoLi(todoString);
@@ -25,9 +38,9 @@ const tabs = [hisTab, sciTab, misTab];
 const til = document.getElementById('til');
 
 const setFact = (type) => {
-  chrome.storage.sync.get(date, (ret)=>{
+  chrome.storage.sync.get(date, (ret) => {
     const todayData = ret[date];
-    factSnippet.innerHTML = todayData[type];
+    factSnippet.innerHTML = todayData[type].content;
     if (type === 'misc') {
       til.classList.remove('hidden');
     } else {
@@ -43,8 +56,8 @@ const selectTab = (tab, factName) => {
   setFact(factName);
 };
 
-tabs.forEach((tabInfo)=>{
-  tabInfo[0].addEventListener('click', ()=>{
+tabs.forEach((tabInfo) => {
+  tabInfo[0].addEventListener('click', () => {
     selectTab(tabInfo[0], tabInfo[1]);
   });
 });

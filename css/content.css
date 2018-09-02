@@ -37,7 +37,6 @@ h1 {
 }
 
 .left-half {
-  /* margin-right: 10px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +49,7 @@ h1 {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  height: 85%;
+  height: 75%;
 }
 
 .flipper-container {
@@ -81,7 +80,6 @@ h3 {
 }
 
 p {
-  /* font-family: 'Lato', sans-serif; */
   font-size: 20px;
   font-weight: 300;
 }
@@ -113,6 +111,16 @@ p {
   padding: 0;
 }
 
+.fact-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#fact-snippet, #riddle-q, #riddle-a, #voc-def {
+  line-height: 1.5;
+}
+
 .tab-flex {
   width: 100%;
   display: flex;
@@ -135,6 +143,7 @@ p {
   z-index: -1;
 }
 
+/* greeting and prompt */
 .prompt-h1 {
   font-size: 45px;
 }
@@ -176,6 +185,7 @@ p {
   margin-bottom: 20px;
 }
 
+/* fact snippet tabs */
 .fact-tab {
   color: black;
   padding: 6px .2vw;
@@ -202,6 +212,21 @@ p {
   border-top-right-radius: 0px;
   padding: 20px;
 }
+
+#fact-snippet {
+  height: 100%;
+  overflow: scroll;
+}
+
+/* WIDGET */
+.widget {
+  font-size: 20px;
+  padding: 10px;
+  color: #FFF;
+  position: absolute;
+}
+
+/* todos */
 
 .todo-display {
   color: black;
@@ -233,17 +258,8 @@ p {
 }
 
 #todo-toggle-button {
-  font-size: 20px;
-  padding: 3px 10px;
-  background-color: #e3e9f2;
-  color: black;
-  position: absolute;
   top: 0;
   left: 0;
-}
-
-#fact-snippet, #riddle-q, #riddle-a, #voc-def {
-  line-height: 1.5;
 }
 
 .translate-right {
@@ -256,6 +272,25 @@ p {
   transition: transform 0.3s ease-in-out;
 }
 
+/* favoriting */
+.heart {
+  color: gray;
+  padding: none;
+  width: fit-content;
+}
+
+.heart:hover {
+  cursor: pointer;
+  color: #d87f7f;
+}
+
+.favorited {
+  color: #bc0000 !important;
+}
+
+#favorites {
+  bottom: 0;
+  right: 0;
 #til {
   color: grey;
   float: right;

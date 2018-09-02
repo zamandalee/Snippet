@@ -80,7 +80,6 @@ h3 {
 }
 
 p {
-  /* font-family: 'Lato', sans-serif; */
   font-size: 20px;
   font-weight: 300;
 }
@@ -275,4 +274,14 @@ p {
 
 .favorited {
   color: #bc0000 !important;
+}
+
+#favorites {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 300;
 }

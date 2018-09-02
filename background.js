@@ -14,6 +14,12 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
+chrome.browserAction.onClicked.addListener(function(tab) {
+  chrome.tabs.update({url: "https://google.com"});
+  // TODO change google.com to demo site
+  window.close();
+});
+
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   switch( request.type ) {
     case 'getVocabWord':

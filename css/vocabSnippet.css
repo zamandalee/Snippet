@@ -8,7 +8,11 @@
 
   display: flex;
   align-items: center;
-  height: 15%;
+
+  box-sizing: border-box;
+  height: 25%;
+  min-height: 25%;
+  height: fit-content;
 }
 
 .vocab-flipper-container.flip .vocab-flipper {

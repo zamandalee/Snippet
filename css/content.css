@@ -37,7 +37,6 @@ h1 {
 }
 
 .left-half {
-  /* margin-right: 10px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +49,7 @@ h1 {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  height: 85%;
+  height: 75%;
 }
 
 .flipper-container {

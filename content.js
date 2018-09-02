@@ -34,6 +34,7 @@ chrome.storage.sync.get([date, 'todos'], (ret) => {
 const hisTab = [document.getElementById('his-tab'), "history"];
 const sciTab = [document.getElementById('sci-tab'), "science"];
 const misTab = [document.getElementById('mis-tab'), "misc"];
+const tilFooter = document.getElementsByClassName('til-footer')[0];
 const tabs = [hisTab, sciTab, misTab];
 const til = document.getElementById('til');
 
@@ -42,8 +43,11 @@ const setFact = (type) => {
     const todayData = ret[date];
     factSnippet.innerHTML = todayData[type].content;
     if (type === 'misc') {
+      til.href = `https://reddit.com${todayData[type].url}`;
+      tilFooter.classList.add('footer-border');
       til.classList.remove('hidden');
     } else {
+      tilFooter.classList.remove('footer-border');
       til.classList.add('hidden');
     }
   });

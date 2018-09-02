@@ -12,20 +12,25 @@ body {
   height: 100vh;
   width: 100vw;
   padding: 50px 100px;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
   box-sizing: border-box;
   background-size: 100% 100%;
 
   font-family: 'Lato', sans-serif;
 }
 
+.logo {
+  width: 55px;
+  padding: 15px 0;
+}
+
 h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 130px;
+  font-size: 125px;
   font-weight: bold;
   text-align: center;
   color: white;
-  padding-bottom: 20px;
+  padding-bottom: 8px;
 }
 
 .snippets {
@@ -139,7 +144,7 @@ p {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0, .35);
+  background-color: rgba(0,0,0, .4);
   z-index: -1;
 }
 
@@ -197,10 +202,6 @@ p {
 }
 
 .fact-tab:hover {
-  background-color: #e3e9f2;
-}
-
-.selected-tab {
   background-color: #e3e9f2;
 }
 
@@ -291,7 +292,23 @@ p {
 #favorites {
   bottom: 0;
   right: 0;
+}
+
 #til {
-  color: grey;
-  float: right;
+  color: #103e89;
+  text-decoration: underline;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.til-footer {
+  padding-top: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-border {
+  border-top: 1px solid #d0d5dd;
 }

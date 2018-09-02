@@ -46,11 +46,12 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 
 # Technologies and Technical Challenges
 - JavaScript
-- HTML5/CSS3
+- Jquery
 - Google Chrome API (Storage, ...)
 - Reddit API
-- News API
+- New York Times API
 - Vocabulary API
+- HTML5/CSS3
 
 # Weekend Accomplishments
 - All team members completed sample Google Chrome extension

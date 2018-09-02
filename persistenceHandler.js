@@ -27,7 +27,8 @@ const getDailySnippets = () => {
       todayData['imageURL'] = {content: imageURL, favorited: false};
       document.body.style.backgroundImage = `url(${imageURL})`;
 
-      miscSnippet((miscValue) => {
+      miscSnippet((miscValue, miscUrl) => {
+        // TODO: display miscUrl
         todayData['misc'] = {content: miscValue, favorited: false};
         chrome.storage.sync.set({ [todayDate]: todayData });
       });

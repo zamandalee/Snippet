@@ -25,7 +25,7 @@ chrome.storage.sync.get([date, 'todos'], (ret) => {
     });
 
     const todos = Object.keys(ret['todos']);
-    todos.forEach((todoString) => {
+    todos.forEach((todoString)=>{
       createTodoLi(todoString);
     });
   }
@@ -35,11 +35,17 @@ const hisTab = [document.getElementById('his-tab'), "history"];
 const sciTab = [document.getElementById('sci-tab'), "science"];
 const misTab = [document.getElementById('mis-tab'), "misc"];
 const tabs = [hisTab, sciTab, misTab];
+const til = document.getElementById('til');
 
 const setFact = (type) => {
   chrome.storage.sync.get(date, (ret) => {
     const todayData = ret[date];
     factSnippet.innerHTML = todayData[type].content;
+    if (type === 'misc') {
+      til.classList.remove('hidden');
+    } else {
+      til.classList.add('hidden');
+    }
   });
 };
 

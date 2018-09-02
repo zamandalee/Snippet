@@ -14,32 +14,63 @@ todoOpener.addEventListener('click', () => {
   }
 });
 
-const createTodoLi = (text) => {
-  const newTodoLi = document.createElement('li');
-  const newButton = document.createElement('button');
-  newButton.innerHTML = text;
-  newTodoLi.appendChild(newButton);
-  todoUl.appendChild(newTodoLi);
-  newButton.addEventListener('click', () => {
+const createTrashButton = (text, li) => {
+  const trashButton = document.createElement('button');
+  trashButton.classList.add('trash');
+  trashButton.innerHTML = "&#128465";
+
+  trashButton.addEventListener('click', ()=>{
     chrome.storage.sync.get('todos', (ret) => {
       const currentTodos = ret['todos'];
-      currentTodos[text] = true;
+      delete currentTodos[text];
+      todoUl.removeChild(li);
       chrome.storage.sync.set({todos: currentTodos});
     });
   });
-  // TODO hook button to strikeout
-  // TODO make trash can
+  return trashButton;
+};
+
+
+const createTodoLi = (text) => {
+  const newTodoLi = document.createElement('li');
+  const newButton = document.createElement('button');
+  const trashButton = createTrashButton(text, newTodoLi);
+
+  chrome.storage.sync.get('todos', (initialSyncRet) => {
+    const initialCurrentTodos = initialSyncRet['todos'];
+    if (initialCurrentTodos[text]) {
+      newButton.innerHTML = `<strike>${text}</strike>`;
+    } else {
+      newButton.innerHTML = text;
+    }
+    newTodoLi.appendChild(newButton);
+    newTodoLi.appendChild(trashButton);
+    todoUl.appendChild(newTodoLi);
+    newButton.addEventListener('click', () => {
+      chrome.storage.sync.get('todos', (ret) => {
+        const currentTodos = ret['todos'];
+        currentTodos[text] = !currentTodos[text];
+        if (currentTodos[text]) {
+          newButton.innerHTML = `<strike>${text}</strike>`;
+        } else {
+          newButton.innerHTML = text;
+        }
+        chrome.storage.sync.set({todos: currentTodos});
+      });
+    });
+  });
 };
 
 todoForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const text = todoInput.value;
-  createTodoLi(text);
 
   todoForm.reset();
   chrome.storage.sync.get('todos', (ret) => {
     const currentTodos = ret['todos'];
     currentTodos[text] = false;
-    chrome.storage.sync.set({todos: currentTodos});
+    chrome.storage.sync.set({todos: currentTodos}, () => {
+      createTodoLi(text);
+    });
   });
 });

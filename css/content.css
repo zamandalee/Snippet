@@ -246,7 +246,11 @@ p {
 }
 
 #todo-ul > li > button {
-  width: 100%;
+  width: 90%;
+}
+
+#todo-ul > li > .trash {
+  width: 10%;
 }
 
 #todo-ul > li > button:hover {
@@ -287,4 +291,7 @@ p {
 #favorites {
   bottom: 0;
   right: 0;
+#til {
+  color: grey;
+  float: right;
 }

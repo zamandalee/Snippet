@@ -63,7 +63,7 @@ This was achieved by fetching and updating data contained in Chrome Storage. Bec
 
 ### Flipping
 When clicked, the Vocab and Brainteaser snippets flip, simulating a flashcard.
-<img src="demo/images/brainteaser.gif" width=500px/>
+<img src="images/brainteaser.gif" width=500px/>
 
 ```css
 /* css/vocabSnippet.css */
@@ -153,6 +153,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 # Pending Features
 - News snippet: include a dropdown for National, Business, Tech, etc. categories
+- Search functionality in history
 - Order the history to move favorites up to the top
-- Preferences: allow users to choose which snippets to be on page
+- Preferences: when page loads for first time, allow users to choose which snippets to be on page
 - Backend: supplies all subscribed users with same daily snippet data

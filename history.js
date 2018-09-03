@@ -89,7 +89,8 @@ function renderContent(category) {
       }
 
       // add the innerHTML depending on category, slice to length
-      itemContent.innerHTML = getItemContent(categoryPair[0], categoryPair[1].content);
+      let itemContentLong = getItemContent(categoryPair[0], categoryPair[1].content);
+      itemContent.innerHTML = itemContentLong.slice(0, 100) + '...';
 
       newHistoryItem.appendChild(itemFavoriteButton);
       newHistoryItem.appendChild(itemContent);

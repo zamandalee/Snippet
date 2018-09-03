@@ -1,16 +1,16 @@
 /*eslint no-undef: 0*/
 
-// open history/favorites modal
 const favoriteButton = document.getElementById('favorites');
 const modal = document.getElementsByClassName('black-modal')[0];
 const modalX = document.getElementById('black-modal-x');
 
-
+// open history modal
 favoriteButton.addEventListener('click', () => {
     modal.classList.remove('hidden');
     renderContent('fact');
 });
 
+// exit history modal
 modalX.addEventListener('click', () => {
   //make fact the default selected tab again
   const selectedTab = document.getElementsByClassName('history-selected-tab')[0];
@@ -49,9 +49,9 @@ function getContent(category, callback) {
               categoryContent.push(...favorites);
             }
         }
+        callback(categoryContent, allKeys[i]);
       }
     }
-    callback(categoryContent);
   });
 }
 
@@ -69,31 +69,53 @@ function getFavorites(todayData) {
 }
 
 function renderContent(category) {
-  getContent(category, (content) => {
+  getContent(category, (content, date) => {
     const historyList = document.getElementById('history-list');
     historyList.innerHTML = '';
 
     // render each item in history list
     for (let i = 0; i < content.length; i++) {
       const categoryPair = content[i];
-      console.log("in for");
+
       const newHistoryItem = document.createElement('li');
       const itemContent = document.createElement('p');
 
       // handle favorite button coloring
       const itemFavoriteButton = document.createElement('button');
+      itemFavoriteButton.innerHTML = '&hearts;';
       itemFavoriteButton.classList.add('heart');
       if (categoryPair[1].favorited) {
         itemFavoriteButton.classList.add('favorited');
       }
 
-      // add the innerHTML depending on category
+      setFavoriteListener(itemFavoriteButton, categoryPair[0], date);
+
       itemContent.innerHTML = getItemContent(categoryPair[0], categoryPair[1].content);
 
-      newHistoryItem.appendChild(itemFavoriteButton);
       newHistoryItem.appendChild(itemContent);
+      newHistoryItem.appendChild(itemFavoriteButton);
       historyList.appendChild(newHistoryItem);
     }
+  });
+}
+
+function setFavoriteListener(itemFavoriteButton, category, date) {
+  itemFavoriteButton.addEventListener( 'click', () => {
+
+    chrome.storage.sync.get(date, ret => {
+      console.log(ret);
+      console.log(date);
+      console.log(ret[date][category]);
+      if ( ret[date][category].favorited ) {
+          itemFavoriteButton.classList.remove('favorited');
+          ret[date][category].favorited = false;
+          chrome.storage.sync.set({[date]: ret[date]});
+      } else {
+        itemFavoriteButton.classList.add('favorited');
+        ret[date][category].favorited = true;
+        chrome.storage.sync.set({[date]: ret[date]});
+      }
+    });
   });
 }
 

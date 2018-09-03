@@ -11,17 +11,17 @@
   },
   "browser_action": {
     "default_icon": {
-    "16": "images/scissors_16.png",
-    "32": "images/scissors_32.png",
-    "48": "images/scissors_48.png",
-    "128": "images/scissors_128.png"
+    "16": "images/snippet_16.png",
+    "32": "images/snippet_32.png",
+    "48": "images/snippet_48.png",
+    "128": "images/snippet_128.png"
     }
   },
   "icons": {
-    "16": "images/scissors_16.png",
-    "32": "images/scissors_32.png",
-    "48": "images/scissors_48.png",
-    "128": "images/scissors_128.png"
+    "16": "images/snippet_16.png",
+    "32": "images/snippet_32.png",
+    "48": "images/snippet_48.png",
+    "128": "images/snippet_128.png"
   },
   "chrome_url_overrides" : {
     "newtab": "content.html"

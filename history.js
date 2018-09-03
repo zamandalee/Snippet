@@ -90,10 +90,10 @@ function renderContent(category) {
 
       // add the innerHTML depending on category, slice to length
       let itemContentLong = getItemContent(categoryPair[0], categoryPair[1].content);
-      itemContent.innerHTML = itemContentLong.slice(0, 100) + '...';
+      itemContent.innerHTML = itemContentLong.slice(0, 102) + '...';
 
-      newHistoryItem.appendChild(itemFavoriteButton);
       newHistoryItem.appendChild(itemContent);
+      newHistoryItem.appendChild(itemFavoriteButton);
       historyList.appendChild(newHistoryItem);
     }
   });

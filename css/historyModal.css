@@ -61,6 +61,16 @@
 }
 
 #history-list li {
-  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5;
+
+  padding: 15px 8px;
   border-bottom: 1px solid #d0d5dd;
+}
+
+#history-list button {
+  font-size: 20px;
+  padding-left: 15px;
 }

@@ -1,4 +1,4 @@
-<!-- <p align="center"><img src="./assets/images/perceptionlogo.png" width=350px/></p> -->
+<p align="center"><img src="images/logo.png" width=350px/></p>
 
 <h1 align="center">SNIPPET</h1>
 

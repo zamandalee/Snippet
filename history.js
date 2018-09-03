@@ -103,9 +103,6 @@ function setFavoriteListener(itemFavoriteButton, category, date) {
   itemFavoriteButton.addEventListener( 'click', () => {
 
     chrome.storage.sync.get(date, ret => {
-      console.log(ret);
-      console.log(date);
-      console.log(ret[date][category]);
       if ( ret[date][category].favorited ) {
           itemFavoriteButton.classList.remove('favorited');
           ret[date][category].favorited = false;

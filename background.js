@@ -11,8 +11,7 @@ chrome.runtime.onInstalled.addListener(function() {
 });
 
 chrome.browserAction.onClicked.addListener(function(tab) {
-  chrome.tabs.update({url: "https://google.com"});
-  // TODO change google.com to demo site
+  chrome.tabs.update({url: "https://zamandalee.github.io/Snippet/"});
   window.close();
 });
 

@@ -54,7 +54,7 @@ h1 {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  height: 75%;
+  height: 80%;
 }
 
 .flipper-container {
@@ -219,6 +219,10 @@ p {
   overflow: scroll;
 }
 
+.selected-tab {
+  background-color: #e3e9f2;
+}
+
 /* WIDGET */
 .widget {
   font-size: 20px;
@@ -293,6 +297,8 @@ p {
   bottom: 0;
   right: 0;
 }
+
+/* TIL */
 
 #til {
   color: #103e89;

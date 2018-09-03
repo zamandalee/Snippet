@@ -1,11 +1,7 @@
 /*eslint no-undef: 0*/
 
 const defaultPreferences = {
-  fact: true,
-  vocab: true,
-  news: true,
-  brain: true,
-  name: '',
+  name: ''
 };
 
 chrome.runtime.onInstalled.addListener(function() {

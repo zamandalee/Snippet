@@ -16,10 +16,7 @@ chrome.storage.sync.get([date, 'todos'], (ret) => {
     renderVocabSnippet(todayData['vocab'].content);
 
     Array.from(hearts).forEach( heart => {
-      console.log(heart);
-      console.log(todayData[heart.dataset.type]);
       if (todayData[heart.dataset.type].favorited) {
-        console.log("in condition");
         heart.classList.add('favorited');
       }
     });

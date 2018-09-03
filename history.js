@@ -1,16 +1,16 @@
 /*eslint no-undef: 0*/
 
-// open history/favorites modal
 const favoriteButton = document.getElementById('favorites');
 const modal = document.getElementsByClassName('black-modal')[0];
 const modalX = document.getElementById('black-modal-x');
 
-
+// open history modal
 favoriteButton.addEventListener('click', () => {
     modal.classList.remove('hidden');
     renderContent('fact');
 });
 
+// exit history modal
 modalX.addEventListener('click', () => {
   //make fact the default selected tab again
   const selectedTab = document.getElementsByClassName('history-selected-tab')[0];
@@ -82,12 +82,13 @@ function renderContent(category) {
 
       // handle favorite button coloring
       const itemFavoriteButton = document.createElement('button');
+      itemFavoriteButton.innerHTML = '&hearts;';
       itemFavoriteButton.classList.add('heart');
       if (categoryPair[1].favorited) {
         itemFavoriteButton.classList.add('favorited');
       }
 
-      // add the innerHTML depending on category
+      // add the innerHTML depending on category, slice to length
       itemContent.innerHTML = getItemContent(categoryPair[0], categoryPair[1].content);
 
       newHistoryItem.appendChild(itemFavoriteButton);

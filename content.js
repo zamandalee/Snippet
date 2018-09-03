@@ -41,6 +41,7 @@ const setFact = (type) => {
     const todayData = ret[date];
     factSnippet.innerHTML = todayData[type].content;
 
+    // favorite specific facts
     heart.dataset.type = type;
     if (todayData[type].favorited) {
       heart.classList.add('favorited');

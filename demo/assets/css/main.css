@@ -3498,3 +3498,7 @@ input, select, textarea {
 #header-h2 {
 	font-size: 30px;
 }
+
+#img-big {
+	width: 120%;
+}

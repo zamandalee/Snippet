@@ -90,13 +90,7 @@ function renderContent(category) {
 
       setFavoriteListener(itemFavoriteButton, categoryPair[0], date);
 
-      // add the innerHTML depending on category, slice to length
-      let itemContentLong = getItemContent(categoryPair[0], categoryPair[1].content);
-      if (categoryPair[0] === 'vocab') {
-        itemContent.innerHTML = itemContentLong;
-      } else {
-        itemContent.innerHTML = itemContentLong.slice(0, 102) + '...';
-      }
+      itemContent.innerHTML = getItemContent(categoryPair[0], categoryPair[1].content);
 
       newHistoryItem.appendChild(itemContent);
       newHistoryItem.appendChild(itemFavoriteButton);

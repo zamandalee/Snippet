@@ -12,18 +12,23 @@ favoriteButton.addEventListener('click', () => {
 });
 
 modalX.addEventListener('click', () => {
+  //make fact the default selected tab again
+  const selectedTab = document.getElementsByClassName('history-selected-tab')[0];
+  selectedTab.classList.remove('history-selected-tab');
+  document.getElementById("fact-tab").classList.add('history-selected-tab');
+
   modal.classList.add('hidden');
 });
 
 // get content from chrome storage
-function getContent(category) {
+function getContent(category, callback) {
   let categoryContent = [];
 
   chrome.storage.sync.get(null, items => {
     const allKeys = Object.keys(items);
 
     for (let i = 0; i < allKeys.length; i++) {
-      if( String(allKeys[i]) !== 'name') {
+      if ( String(allKeys[i]) !== 'preferences' && String(allKeys[i]) !== 'todos' ) {
         const todayData = items[ allKeys[i] ];
 
         switch( category ) {
@@ -46,8 +51,8 @@ function getContent(category) {
         }
       }
     }
+    callback(categoryContent);
   });
-  return categoryContent;
 }
 
 function getFavorites(todayData) {
@@ -64,29 +69,31 @@ function getFavorites(todayData) {
 }
 
 function renderContent(category) {
-  const content = getContent(category);
+  getContent(category, (content) => {
+    const historyList = document.getElementById('history-list');
+    historyList.innerHTML = '';
 
-  const historyList = document.getElementById('history-list');
+    // render each item in history list
+    for (let i = 0; i < content.length; i++) {
+      const categoryPair = content[i];
+      console.log("in for");
+      const newHistoryItem = document.createElement('li');
+      const itemContent = document.createElement('p');
 
-  // render each item in history list
-  content.forEach( categoryPair => {
-    const newHistoryItem = document.createElement('li');
-    const itemContent = document.createElement('p');
+      // handle favorite button coloring
+      const itemFavoriteButton = document.createElement('button');
+      itemFavoriteButton.classList.add('heart');
+      if (categoryPair[1].favorited) {
+        itemFavoriteButton.classList.add('favorited');
+      }
 
-    // handle favorite button coloring
-    const favoriteButton = document.createElement('button');
-    favoriteButton.classList.add('heart');
-    if (categoryPair[1].favorited) {
-      favoriteButton.classList.add('favorited');
+      // add the innerHTML depending on category
+      itemContent.innerHTML = getItemContent(categoryPair[0], categoryPair[1].content);
+
+      newHistoryItem.appendChild(itemFavoriteButton);
+      newHistoryItem.appendChild(itemContent);
+      historyList.appendChild(newHistoryItem);
     }
-
-    // add the innerHTML depending on category
-    itemContent.innerHTML = getItemContent(categoryPair[0], categoryPair[1].content);
-
-    newHistoryItem.appendChild(favoriteButton);
-    newHistoryItem.appendChild(itemContent);
-    historyList.appendChild(newHistoryItem);
-
   });
 }
 
@@ -102,3 +109,22 @@ function getItemContent(category, content) {
       return content.id;
   }
 }
+
+// Click handlers for each tab
+const factTab = document.getElementById('fact-tab');
+const riddlesTab = document.getElementById('riddles-tab');
+const vocabTab = document.getElementById('vocab-tab');
+const favTab = document.getElementById('fav-tab');
+
+const historyTabs = [[factTab, 'fact'], [riddlesTab, 'riddle'], [vocabTab, 'vocab'], [favTab, 'favorites']];
+
+historyTabs.forEach( tab => {
+  tab[0].addEventListener('click', () => {
+    const selectedTab = document.getElementsByClassName('history-selected-tab')[0];
+    selectedTab.classList.remove('history-selected-tab');
+    tab[0].classList.add('history-selected-tab');
+
+    renderContent(tab[1]);
+  });
+
+});

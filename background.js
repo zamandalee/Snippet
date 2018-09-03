@@ -1,7 +1,7 @@
 /*eslint no-undef: 0*/
 
 const defaultPreferences = {
-  name: '',
+  name: ''
 };
 
 chrome.runtime.onInstalled.addListener(function() {

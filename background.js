@@ -18,7 +18,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   switch( request.type ) {
     case 'getVocabWord':
-      // send ajax requestion to oxford dictionary for vocabSnippet
+      // ajax request to oxford dictionary for vocabSnippet
       $.ajax({
         url: `https://od-api.oxforddictionaries.com/api/v1/entries/en/${request.word}`,
         method: 'GET',

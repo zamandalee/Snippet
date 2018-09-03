@@ -34,11 +34,11 @@ Feel like you’ve hit a learning plateau? Want to be more well-rounded? Have yo
 
 ## Bonus Features
 - Feature expansion
-   - [ ] Widgets: todo, weather (4: Dustin Amanda)
+   - [X] Widgets: todo (4: Dustin)
    - [ ] News: dropdown to toggle NYT homepage news, national, business, tech, etc. specifics (5: Dustin or Amanda)
 - User customizable
   - [ ] Allow users to see their Snippet history (1: Dustin)
-  - [ ] Favorite capabilities (3: Amanda)
+  - [X] Favorite capabilities (3: Amanda)
   - [ ] Custom styling for their homepage
 - [ ] Styling
   - [ ] Before-loaded gray boxes (like on LinkedIn)

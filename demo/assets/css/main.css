@@ -3502,3 +3502,25 @@ input, select, textarea {
 #img-big {
 	width: 120%;
 }
+
+.profile {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dev {
+	display: flex;
+	flex-direction: column;
+	padding: 0 20px;
+}
+
+.dev-icons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.dev p {
+	font-size: 20px;
+}

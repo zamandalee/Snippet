@@ -1,8 +1,12 @@
 <p align="center"><img src="images/logo.png" width=350px/></p>
 
 <h2 align="center">
-  <a href="https://zamandalee.github.io/Snippet/">Explore the demo page!</a>
+  <a href="https://chrome.google.com/webstore/detail/snippet/folafpbldfpbbbjcchmgncheeidanfeg">Install from Chrome Store!</a>
 </h2>
+
+<h3 align="center">
+  <a href="https://zamandalee.github.io/Snippet/">Demo Page</a>
+</h3>
 
 <p align="center">
   <a href="#background">Background</a> •

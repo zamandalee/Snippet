@@ -269,9 +269,10 @@ p {
   font-size: 13px;
 }
 
-/* #todo-ul > li > button:hover {
-  background-color: lightgrey;
-} */
+#todo-ul > li > button:hover {
+  /* background-color: lightgrey; */
+  color: #555;
+}
 
 #todo-toggle-button {
   top: 0;

@@ -17,7 +17,7 @@ todoOpener.addEventListener('click', () => {
 const createTrashButton = (text, li) => {
   const trashButton = document.createElement('button');
   trashButton.classList.add('trash');
-  trashButton.innerHTML = "&#128465";
+  trashButton.innerHTML = "&#10005;";
 
   trashButton.addEventListener('click', ()=>{
     chrome.storage.sync.get('todos', (ret) => {

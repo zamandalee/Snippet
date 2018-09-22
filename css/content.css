@@ -234,20 +234,30 @@ p {
 /* todos */
 
 .todo-display {
-  color: black;
   position: absolute;
   top: 33px;
   left: 0;
-  font-size: 22px;
-  padding: 3px 10px;
-  background-color: #e3e9f2;
+
+  padding: 6px 10px;
+  border-radius: 3px;
+
+  color: black;
+  font-size: 17px;
+  background-color: rgba(227, 233, 242, 0.65);
+}
+
+.todo-input {
+
 }
 
 #todo-ul > li {
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 1px solid lightgrey;
+
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
 }
 
 #todo-ul > li > button {
@@ -256,6 +266,7 @@ p {
 
 #todo-ul > li > .trash {
   width: 10%;
+  font-size: 13px;
 }
 
 #todo-ul > li > button:hover {

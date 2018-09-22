@@ -235,7 +235,7 @@ p {
 
 .todo-display {
   position: absolute;
-  top: 33px;
+  top: 38px;
   left: 0;
 
   padding: 6px 10px;
@@ -247,7 +247,7 @@ p {
 }
 
 .todo-input {
-
+  padding: 5px;
 }
 
 #todo-ul > li {
@@ -269,9 +269,9 @@ p {
   font-size: 13px;
 }
 
-#todo-ul > li > button:hover {
+/* #todo-ul > li > button:hover {
   background-color: lightgrey;
-}
+} */
 
 #todo-toggle-button {
   top: 0;
@@ -279,7 +279,7 @@ p {
 }
 
 .translate-right {
-  transform: translateX(0);
+  transform: translateX(2%);
   transition: transform 0.3s ease-in-out;
 }
 

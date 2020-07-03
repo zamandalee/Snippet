@@ -1,22 +1,17 @@
 .background {
   background: #e3e9f2;
 }
-
 .riddle-flipper-container {
-  margin: 10px;
   z-index: 1;
 
   display: flex;
   align-items: center;
-  width: 50%;
-  height: 94.5%;
+  width: 48%;
 }
-
 .riddle-flipper-container.flip .riddle-flipper {
   transform: rotateY(180deg);
   height: 100%;
 }
-
 .riddle-flipper {
   transition: 0.8s;
   transform-style: preserve-3d;
@@ -25,13 +20,11 @@
   width: 100%;
   border-radius: 3px;
 }
-
 .riddle-front, .riddle-back, .hide {
   padding: 12px;
   box-sizing: border-box;
   border-radius: 3px;
 }
-
 .riddle-front, .riddle-back {
   display: flex;
   flex-direction: column;
@@ -40,7 +33,6 @@
   background: #e3e9f2;
   transition: color 2s;
 }
-
 .riddle-front {
   transform: rotateY(0deg);
   z-index: 3;
@@ -49,7 +41,6 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
 .riddle-back {
   transform: rotateY(180deg);
   z-index: 3;
@@ -58,19 +49,16 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
 .riddle-front:hover {
   background: #d0d5dd;
   cursor: pointer;
   transform: scale(1.015);
   transition: all .2s ease-in-out;
 }
-
 .riddle-back:hover {
   background: #d0d5dd;
   cursor: pointer;
 }
-
 .hide {
   display: none;
   color: #e3e9f2;
@@ -81,35 +69,29 @@
 .riddle-flipper p, .riddle-flipper a {
   width: fit-content;
 }
-
 .riddle-flipper a {
   color: #103e89;
   font-size: 16px;
   font-weight: 300;
   text-decoration: underline;
 }
-
 .riddle-flipper a:hover {
   color: #3169c4;
 }
-
 #riddle-q, #riddle-a, #riddle-src {
   padding: 8px;
 }
-
 #riddle-q, #riddle-a {
   overflow: scroll;
   /* height: 100%; */
   /* border-bottom: 1px solid #d0d5dd; */
 }
-
 .riddle-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 8px;
 }
-
 .riddle-back .riddle-footer {
   justify-content: flex-end;
 }

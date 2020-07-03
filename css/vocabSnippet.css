@@ -1,24 +1,14 @@
 .background {
   background: #e3e9f2;
 }
-
 .vocab-flipper-container {
-  margin: 10px 0;
   z-index: 1;
-
   display: flex;
-  align-items: center;
-
-  box-sizing: border-box;
-  height: 20%;
-  min-height: 20%;
-  height: fit-content;
+  align-items: flex-end;
 }
-
 .vocab-flipper-container.flip .vocab-flipper {
   transform: rotateY(180deg);
 }
-
 .vocab-flipper {
   transition: 0.8s;
   transform-style: preserve-3d;
@@ -26,44 +16,35 @@
   width: 100%;
   border-radius: 3px;
 }
-
 .vocab-front, .vocab-back, .hide {
-  margin: 10px;
   padding: 12px;
   box-sizing: border-box;
-
   border-radius: 3px;
 }
-
 .vocab-front, .vocab-back {
   display: flex;
   backface-visibility: hidden;
   background: #e3e9f2;
   transition: color 2s;
 }
-
 .vocab-front {
   transform: rotateY(0deg);
   z-index: 3;
 }
-
 .vocab-back {
   transform: rotateY(180deg);
   z-index: 3;
 }
-
 .vocab-front:hover {
   background: #d0d5dd;
   cursor: pointer;
   transform: scale(1.015);
   transition: all .2s ease-in-out;
 }
-
 .vocab-back:hover {
   background: #d0d5dd;
   cursor: pointer;
 }
-
 .hide {
   display: none;
   color: #e3e9f2;
@@ -77,11 +58,9 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .pos-word {
   display: flex;
 }
-
 .vocab-title {
   margin: auto;
   padding-right: 25px;
@@ -89,37 +68,29 @@
   height: 100%;
   border-right: 2px solid #474747;
 }
-
 .vocab-back .vocab-title {
   border: none;
 }
-
 #voc-partofspeech, #voc-def {
   padding-left: 25px;
 }
-
 #voc-def {
   border-left: 2px solid #474747;
 }
-
 #voc-word {
   padding-left: 15px;
   font-weight: 400;
 }
-
 .heart-arrow {
   display: flex;
   align-items: center;
 }
-
 .voc-arrow {
   padding-left: 20px;
 }
-
 .heart-arrow .voc-arrow {
   padding-left: 32px;
 }
-
 .vocab-back .voc-arrow {
   width: 22%;
 }

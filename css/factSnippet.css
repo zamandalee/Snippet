@@ -1,0 +1,64 @@
+#fact-snippet, #riddle-q, #riddle-a, #voc-def {
+  line-height: 1.5;
+}
+.fact {
+  width: 48%;
+  background-color: rgba(0,0,0,0);
+  box-sizing: border-box;
+  padding: 0;
+}
+.tab-flex {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.fact-tab {
+  height: 100%;
+  width: 33%;
+  padding: 6px .2vw;
+  border-radius: 8px 8px 0px 0;
+  background-color: #c7cdd6;
+  text-align: center;
+  color: black;
+  font-size: 17px;
+}
+.fact-tab:hover {
+  background-color: #e3e9f2;
+}
+.selected-tab {
+  background-color: #e3e9f2;
+}
+.fact-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  background: #e3e9f2;
+  border-radius: 3px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding: 20px;
+}
+#fact-snippet {
+  height: 100%;
+  overflow: scroll;
+}
+#til {
+  color: #103e89;
+  text-decoration: underline;
+  font-weight: 300;
+  font-size: 16px;
+}
+.til-footer {
+  padding-top: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-border {
+  border-top: 1px solid #d0d5dd;
+}

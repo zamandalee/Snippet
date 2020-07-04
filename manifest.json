@@ -6,7 +6,7 @@
   "author": "Amanda Lee & Dustin Pearson",
   "permissions": ["tabs", "declarativeContent", "storage", "https://od-api.oxforddictionaries.com/*"],
   "background": {
-    "scripts": ["jquery-3.3.1.min.js", "background.js"],
+    "page": "content.html",
     "persistent": false
   },
   "browser_action": {

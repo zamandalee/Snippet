@@ -17,17 +17,14 @@ span, article, footer, time, small {
   box-sizing: inherit;
   background: transparent;
 }
-
 ul {
   list-style: none;
 }
-
 img {
   display: block;
   width: 100%;
   height: auto;
 }
-
 input[type="password"],
 input[type="email"],
 input[type="text"],
@@ -42,14 +39,11 @@ button {
   -moz-appearance: none;
   appearance: none;
 }
-
 button,
 input[type="submit"] {
   cursor: pointer;
 }
-
 /* Clearfix */
-
 .group:after {
   content: "";
   display: block;

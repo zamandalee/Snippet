@@ -7,7 +7,6 @@
   height: 100%;
   background-color: rgba(0,0,0,.5);
 }
-
 #black-modal-x {
   position: absolute;
   top: 20px;
@@ -15,7 +14,6 @@
   color: white;
   font-size: 32px;
 }
-
 #inner-history-modal {
   position: absolute;
   left: 50%;
@@ -24,7 +22,6 @@
   background-color: rgba(0,0,0,0);
   z-index: 2;
 }
-
 #modal-section {
   width: 600px;
   height: 600px;
@@ -33,7 +30,6 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-
 .modal-tab {
   padding: 8px .5vw;
   width: 24.5%;
@@ -44,22 +40,18 @@
   border-radius: 8px 8px 0px 0;
   background-color: #c7cdd6;
 }
-
 .modal-tab:hover {
   background-color: #e3e9f2;
 }
-
 .history-selected-tab {
   background-color: #e3e9f2;
 }
-
 /* history list items */
 #history-list {
   height: 100%;
   padding: 10px 0;
   overflow: scroll;
 }
-
 #history-list li {
   display: flex;
   justify-content: space-between;
@@ -69,7 +61,6 @@
   padding: 15px 8px;
   border-bottom: 1px solid #d0d5dd;
 }
-
 #history-list button {
   font-size: 20px;
   padding-left: 15px;

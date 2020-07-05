@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Snippet",
-  "version": "1.03",
+  "version": "1.04",
   "description": "Fulfill your curiosity cravings",
   "author": "Amanda Lee & Dustin Pearson",
   "permissions": ["tabs", "declarativeContent", "storage", "https://od-api.oxforddictionaries.com/*"],

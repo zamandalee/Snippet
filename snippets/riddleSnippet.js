@@ -223,7 +223,17 @@ const riddleSnippets = [
     riddle: "You have someone working for you for seven days and a gold bar to pay them. You must pay the worker for their work at the end of every day. If you are only allowed to make two breaks in the gold bar, how do you pay your worker? (Assuming equal amount of work is done during each day thus requiring equal amount of pay for each day)",
     answer: "The trick is not to try and how to cut in such a way to make 7 equal pieces but rather to make transactions with the worker. Make two cuts on the gold bar such that you have the following sizes of bars: 1/7, 2/7, and 4/7.",
     url: "http://www.mytechinterviews.com/gold-for-7-days-of-work"
-  }
+  },
+  {
+    riddle: "Three ants are sitting at the three corners of an equilateral triangle. Each ant starts randomly picks a direction and starts to move along the edge of the triangle. What is the probability that none of the ants collide?",
+    answer: "The ants can only avoid a collision if they all move in the same direction — either all clockwise or all counterclockwise. Each ant only has 2 directional options. Thus, P(No collision) = P(All ants go clockwise) + P( All ants go counterclockwise) = 0.5 * 0.5 * 0.5 + 0.5 * 0.5 * 0.5 = 0.25",
+    url: "http://www.crazyforcode.com/top-10-interview-puzzles/"
+  },
+  {
+    riddle: "Why are manhole covers round?",
+    answer: "Manhole covers are round because it’s the only shape that cannot fall through itself. The cover can never accidentally fall down the hole.",
+    url: "http://www.crazyforcode.com/top-10-interview-puzzles/"
+  },
 ];
 
 function displayRiddleSnippet(riddle) {

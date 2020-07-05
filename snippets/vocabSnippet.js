@@ -1,37 +1,37 @@
 function getVocabWord(callback) {
-  const vocabSnippets = ['abeyance', 'abject', 'abnegate', 'abstruse', 'acarpous', 'acrimonious', 'acumen',
+  const vocabSnippets = [
+    'aberration', 'abeyance', 'abject', 'abnegate', 'abstruse', 'acarpous', 'acrimonious', 'acumen',
     'accrete', 'adroit', 'adumbrate', 'alacrity', 'antipathy', 'arcane',
-    'aspersion', 'assiduity', 'avarice', 'bellicose', 'bereft', 'bombastic', 'bourgeois',
-    'bowdlerize', 'buttress', 'capacious', 'carouse', 'castigate',
-    'circuitous', 'circumvent', 'clement', 'clout', 'cogitate', 'commodious', 'concord',
+    'aspersion', 'assiduity', 'avarice', 'bellicose', 'bereft', 'bifurcation', 'bombastic', 'bourgeois',
+    'bowdlerize', 'buttress', 'capacious', 'capricious', 'carouse', 'castigate',
+    'circuitous', 'circumvent', 'clement', 'cogitate', 'commodious', 'concominent', 'concord',
     'congruous', 'convivial', 'corroborate', 'delineate', 'diffident',
-    'dilatory', 'egregious', 'ephemeral', 'esoteric', 'ethereal',
-    'evanescent', 'fastidious', 'fatuous', 'foment', 'hackneyed',
-    'ignominious', 'impasse', 'incongruous', 'indolent', 'inertia',
-    'insipid', 'inundate', 'jocular', 'lackadaisical', 'mercurial',
-    'mitigate', 'nascent', 'nebulous', 'neophyte', 'noetic', 'nugatory',
-    'obdurate', 'obsequious', 'oracular', 'orthogonal', 'ostensible',
+    'dilatory', 'egregious', 'ephemeral', 'epistolary', 'eponymous', 'esoteric', 'ethereal',
+    'evanescent', 'extoll', 'fastidious', 'fatuous', 'foment', 'hackneyed', 'heuristic',
+    'iconoclastic', 'ignominious', 'impasse', 'incipient', 'incongruous', 'indolent', 'inertia',
+    'insipid', 'inundate', 'jejune', 'jocular', 'lackadaisical', 'malaise', 'mercurial',
+    'misanthrope', 'mitigate', 'nascent', 'nebulous', 'neophyte', 'noetic', 'nugatory',
+    'obdurate', 'obfuscate', 'obsequious', 'opprobrium', 'oracular', 'orthogonal', 'ostensible',
     'palliative', 'paragon', 'paramour', 'perturbation',
-    'polemic', 'presage', 'prevaricator', 'propitious', 'protean',
+    'polemic', 'presage', 'prevaricator', 'propensity', 'propitious', 'protean',
     'provisory', 'quixotic', 'quotidian', 'rancorous', 'recidivism',
-    'reprobate', 'rife', 'sophomoric', 'splendiferous', 'staid',
+    'reprobate', 'rife', 'sacrosanct', 'salient', 'sophomoric', 'splendiferous', 'staid',
     'sublimity', 'surfeit', 'sycophant', 'truculent', 'turgid', 'umbrage',
-    'unctuous', 'variegated', 'venal', 'veracity', 'verdant', 'vituperate',
+    'unctuous', 'variegated', 'venal', 'veracity', 'verdant', 'vitriol', 'vituperate',
     'vivify', 'waif', 'wallydraigle', 'winsome', 'xenophobia', 'yahoo',
-    'zany', 'zenith', 'zephyr'];
+    'zany', 'zenith', 'zephyr'
+  ];
 
   const vocWord = vocabSnippets[ Math.floor( Math.random() * vocabSnippets.length ) ];
 
-  chrome.runtime.sendMessage({type: 'getVocabWord', word: vocWord}, (response) => {
+  chrome.runtime.sendMessage({ type: 'getVocabWord', word: vocWord }, (response) => {
     renderVocabSnippet(response.result); // first render of the day
     callback(response.result);
   });
 }
 
-
-
 function renderVocabSnippet(result) {
-  let partOfSpeech = result.lexicalEntries[0].lexicalCategory.toLowerCase();
+  let partOfSpeech = result.lexicalEntries[0].lexicalCategory.id;
   if (partOfSpeech === 'adjective') {
     partOfSpeech = 'adj.';
   }
